@@ -858,7 +858,7 @@ for(let i = 0; i < resUser * 2 - 1; i++){
 function mathRandInt(min, max) {
 	return Math.round(Math.random() * (max - min) + min)
 }
-for (let i = 0; i < 1; i++) {
+for (let i = 0; i < 10; i++) {
 	let a = mathRandInt(3, 10),
 		b = mathRandInt(3, 10),
 		resUsers,
