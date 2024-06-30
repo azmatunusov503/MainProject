@@ -855,49 +855,49 @@ for(let i = 0; i < resUser * 2 - 1; i++){
 // }
 
 // Задачи
-// function mathRandInt(min, max) {
-// 	return Math.round(Math.random() * (max - min) + min)
-// }
-// for (let i = 0; i < 1; i++) {
-// 	let a = mathRandInt(3, 10),
-// 		b = mathRandInt(3, 10),
-// 		resUsers,
-// 		resTrim = '',
-// 		randSigns = mathRandInt(0, 3),
-// 		randZnak,
-// 		c
-// 	if (randSigns == 0) {
-// 		randZnak = '+'
-// 		c = a + b
-// 	} else if (randSigns == 1) {
-// 		randZnak = '-'
-// 		c = a - b
-// 	} else if (randSigns == 2) {
-// 		randZnak = '*'
-// 		c = a * b
-// 	} else if (randSigns == 3) {
-// 		randZnak = '/'
-// 		c = a / b
-// 	}
-// 	do {
-// 		resTrim = '',
-// 			resUsers = prompt(`Решите пример ${a} ${randZnak} ${b} = ?`)
-// 		if (resUsers !== null) {
-// 			for (let i = 0; i < resUsers.length; i++) {
-// 				if (resUsers[i].trim()) {
-// 					resTrim += resUsers[i]
-// 				}
-// 			}
-// 		}
-// 	} while (resTrim === '' || resUsers === null || Number.isNaN(+resTrim))
-// 	{
-// 		if (resTrim == c) {
-// 			console.log(`Решение верно: ${a} ${randZnak} ${b} = ${resTrim}`)
-// 		} else {
-// 			console.log(`Решение не верно: ${a} ${randZnak} ${b} = ${resTrim} правильный ответ: ${c}`)
-// 		}
-// 	}
-// }
+function mathRandInt(min, max) {
+	return Math.round(Math.random() * (max - min) + min)
+}
+for (let i = 0; i < 1; i++) {
+	let a = mathRandInt(3, 10),
+		b = mathRandInt(3, 10),
+		resUsers,
+		resTrim = '',
+		randSigns = mathRandInt(0, 3),
+		randZnak,
+		c
+	if (randSigns == 0) {
+		randZnak = '+'
+		c = a + b
+	} else if (randSigns == 1) {
+		randZnak = '-'
+		c = a - b
+	} else if (randSigns == 2) {
+		randZnak = '*'
+		c = a * b
+	} else if (randSigns == 3) {
+		randZnak = '/'
+		c = a / b
+	}
+	do {
+		resTrim = '',
+			resUsers = prompt(`Решите пример ${a} ${randZnak} ${b} = ?`)
+		if (resUsers !== null) {
+			for (let i = 0; i < resUsers.length; i++) {
+				if (resUsers[i].trim()) {
+					resTrim += resUsers[i]
+				}
+			}
+		}
+	} while (resTrim === '' || resUsers === null || Number.isNaN(+resTrim))
+	{
+		if (resTrim == c) {
+			console.log(`Решение верно: ${a} ${randZnak} ${b} = ${resTrim}`)
+		} else {
+			console.log(`Решение не верно: ${a} ${randZnak} ${b} = ${resTrim} правильный ответ: ${c}`)
+		}
+	}
+}
 
 // https://stepik.org/course/180784/promo?search=4566353655
 
