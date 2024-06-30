@@ -858,7 +858,7 @@ for(let i = 0; i < resUser * 2 - 1; i++){
 function mathRandInt(min, max) {
 	return Math.round(Math.random() * (max - min) + min)
 }
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 5; i++) {
 	let a = mathRandInt(3, 10),
 		b = mathRandInt(3, 10),
 		resUsers,
@@ -1092,4 +1092,4 @@ arrNum.forEach(function(item, key){
 console.log(`Колличество чётных чисел = ${chetNum}`)
 console.log(`Колличество не чётных чисел = ${neChetNum}`) */
 
-console.log(`hello Azamat`)
+// console.log(`hello Azamat`)
