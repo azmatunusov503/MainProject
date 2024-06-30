@@ -1091,3 +1091,5 @@ arrNum.forEach(function(item, key){
 })
 console.log(`Колличество чётных чисел = ${chetNum}`)
 console.log(`Колличество не чётных чисел = ${neChetNum}`) */
+
+console.log(`hello Azamat`)
