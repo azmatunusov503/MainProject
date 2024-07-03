@@ -47,6 +47,10 @@
 // 7 * 3 = 21
 // 27 - 21 = 6
 
+// 13 / 9 = 1
+// 9 * 1 = 9
+// 13 - 9 = 4
+
 // Операторы сравнение (Операторы булевой логики 'true' 'false')
 
 // console.log(5 > 2);
@@ -56,6 +60,12 @@
 // console.log(true !== true);
 // console.log(true == 1);
 // console.log(false == 0);
+
+
+// console.log(13 % 9);
+// console.log(2 + 2 === 13 % 9);
+// console.log(9 > '9');
+// console.log((5 === 5 && 9 > '9') || (2 + 2 === 13 % 9))
 
 // let a = 0
 // console.log(Boolean (a));
@@ -217,7 +227,7 @@ else{
 // Задачи
 // Первое задачка от Сергей
 // let userResponse = Number(prompt('Ведите число а код его подставить с окончанием на слово мяч')),
-// moduleResult = userResponse % 10
+// 				moduleResult = userResponse % 10
 // if(moduleResult == 1){
 // 	console.log(`${userResponse} мяч`)
 // } else if (moduleResult == 2 || moduleResult == 3 || moduleResult == 4){
@@ -249,6 +259,32 @@ else{
 // console.log(true && false && true);
 
 // Задачи
+
+// Запросите у пользователя число. Выведите последнюю цифру данного числа, используя математический оператор.
+
+// Sample Input 1:
+
+// 18
+// Sample Output 1:
+
+// 8
+// Sample Input 2:
+
+// 103
+// Sample Output 2:
+
+// 3
+// Sample Input 3:
+
+// 356
+// Sample Output 3:
+
+// 6
+
+// let resUsers = Number(prompt('Введите число')),
+// 				moduleRes = resUsers % 10
+// console.log(moduleRes)
+
 // Трете задачка от Сергей
 /* 
 let userResponse = Number(prompt('Ведите время в цифрах'))
@@ -746,6 +782,148 @@ for(let i = 0; i < resUser * 2 - 1; i++){
 // 	console.log(res);
 // }())
 
+// function showPrimes(n) {
+// 	nextPrime: for (let i = 2; i <= n; i++) {
+
+// 			for (let j = 2; j < i; j++) {
+// 					if (i % j == 0) continue nextPrime;
+// 			}
+
+// 			console.log( i ); // простое
+// 	}
+// }
+
+// showPrimes(12)
+
+// function showPrimes(n) {
+
+// 	for (let i = 2; i < n; i++) {
+// 			if (!isPrime(i)) continue;
+
+// 			console.log(i);  // простое
+// 	}
+// }
+
+// function isPrime(n) {
+// 	for (let i = 2; i < n; i++) {
+// 			if ( n % i == 0) return false;
+// 	}
+// 	return true;
+// }
+
+/* <- === === === === === === ===  Задачи  === === === === === === === -> */
+// https://learn.javascript.ru/task/if-else-required
+
+// function checkAge(age){
+// 	if (age > 18) return true
+// 	return confirm('Ты достиг возраст +18')
+// }
+// checkAge(17)
+
+/* <- === === === === === === ===  Задачи  === === === === === === === -> */
+// https://learn.javascript.ru/task/rewrite-function-question-or
+
+// function checkAge(age){
+// 	return age >= 18 ? true : confirm('Ты достиг возраст +18')
+// }
+
+// let resUser = prompt('Ведите свой возраст')
+// console.log(checkAge(resUser))
+
+/* <- === === === === === === ===  Задачи  === === === === === === === -> */
+
+// https://learn.javascript.ru/task/min
+
+// function min(a, b){
+// 	return (a < b || b > a) ? console.log(`Первое значение меньше: ${a}.`) : (a > b || b < a) ? console.log(`Второе значение меньше: ${b}`) : console.log(`Нет меньшого значение`)
+// }
+// let resUserOne = Number(prompt('Введите первое число'))
+// let resUserTwo = Number(prompt('Введите второе число'))
+// min(resUserOne, resUserTwo)
+
+/* <- === === === === === === ===  Задачи  === === === === === === === -> */
+
+// https://learn.javascript.ru/task/pow
+
+/*
+Напишите функцию pow(x,n), которая возводит x в степень n и возвращает результат.
+
+pow(3, 2) = 3 * 3 = 9
+pow(3, 3) = 3 * 3 * 3 = 27
+pow(1, 100) = 1 * 1 * ...* 1 = 1
+Объяснить
+Создайте страницу, которая запрашивает x и n, а затем выводит результат pow(x,n).
+*/
+
+// function pow(x, n){
+// 	return x ** n
+// }
+// console.log(pow(3, 2))
+
+/* <- === === === === === === ===  Не решен  === === === === === === === -> */
+
+
+
+/* <- === === === === === === ===  Задачи  === === === === === === === -> */
+
+// Задаем размер куба
+// const cubeSize = 5;
+
+// Создаем массив, который будет хранить кубические ячейки
+// const cube = [];
+
+// // Заполняем массив ячейками куба
+// for (let z = 0; z < cubeSize; z++) {
+//   cube[z] = [];
+//   for (let y = 0; y < cubeSize; y++) {
+//     cube[z][y] = [];
+//     for (let x = 0; x < cubeSize; x++) {
+//       cube[z][y][x] = {
+//         x: x,
+//         y: y,
+//         z: z,
+//         visible: true
+//       };
+//     }
+//   }
+// }
+
+// // Выводим куб в консоль
+// console.log(cube);
+
+
+/* <- === === === === === === ===  Задачи === === === === === === === -> */
+
+// const pyramidHeight = 5;
+
+// Создаем массив, который будет хранить ячейки пирамиды
+// const pyramid = [];
+
+// Заполняем массив ячейками пирамиды
+// for (let y = 0; y < pyramidHeight; y++) {
+//   pyramid[y] = [];
+//   for (let x = 0; x < pyramidHeight * 2 - 1; x++) {
+//     if (x >= pyramidHeight - 1 - y && x <= pyramidHeight - 1 + y) {
+//       pyramid[y][x] = {
+//         x: x,
+//         y: y,
+//         visible: true
+//       };
+//     } else {
+//       pyramid[y][x] = {
+//         x: x,
+//         y: y,
+//         visible: false
+//       };
+//     }
+//   }
+// }
+
+// Выводим пирамиду в консоль
+// console.log(pyramid);
+
+/* <- === === === === === === ===  Задачи === === === === === === === -> */
+
 // let a = prompt(`Введите 1 слово`)
 // let b = prompt(`Введите 2 слово`)
 // function anotherFunction(text){
@@ -855,49 +1033,125 @@ for(let i = 0; i < resUser * 2 - 1; i++){
 // }
 
 // Задачи
-function mathRandInt(min, max) {
-	return Math.round(Math.random() * (max - min) + min)
-}
-for (let i = 0; i < 5; i++) {
-	let a = mathRandInt(3, 10),
-		b = mathRandInt(3, 10),
-		resUsers,
-		resTrim = '',
-		randSigns = mathRandInt(0, 3),
-		randZnak,
-		c
-	if (randSigns == 0) {
-		randZnak = '+'
-		c = a + b
-	} else if (randSigns == 1) {
-		randZnak = '-'
-		c = a - b
-	} else if (randSigns == 2) {
-		randZnak = '*'
-		c = a * b
-	} else if (randSigns == 3) {
-		randZnak = '/'
-		c = a / b
-	}
-	do {
-		resTrim = '',
-			resUsers = prompt(`Решите пример ${a} ${randZnak} ${b} = ?`)
-		if (resUsers !== null) {
-			for (let i = 0; i < resUsers.length; i++) {
-				if (resUsers[i].trim()) {
-					resTrim += resUsers[i]
-				}
-			}
-		}
-	} while (resTrim === '' || resUsers === null || Number.isNaN(+resTrim))
-	{
-		if (resTrim == c) {
-			console.log(`Решение верно: ${a} ${randZnak} ${b} = ${resTrim}`)
-		} else {
-			console.log(`Решение не верно: ${a} ${randZnak} ${b} = ${resTrim} правильный ответ: ${c}`)
-		}
-	}
-}
+// function mathRandInt(min, max) {
+// 	return Math.round(Math.random() * (max - min) + min)
+// }
+// let a = mathRandInt(3, 10),
+// 				b = mathRandInt(3, 10),
+// 				randZnak
+// function calcRandSigns(a, b, randZnak){
+// 	let randSigns = mathRandInt(0, 3),
+// 					c,
+// 					calcRandZnak = randZnak
+// 	if (randSigns == 0) {
+// 		return(
+// 			randZnak = '+',
+// 			c = a + b
+// 		)
+// 	} else if (randSigns == 1) {
+// 		return(
+// 			randZnak = '-',
+// 		c = a - b
+// 	)
+// 	} else if (randSigns == 2) {
+// 		return(
+// 			randZnak = '*',
+// 			c = a * b
+// 		)
+// 	} else if (randSigns == 3) {
+// 		return(
+// 			randZnak = '/',
+// 		c = a / b
+// 	)
+// 	}
+// }
+
+// console.log(calcRandSigns(a, b, randZnak))
+// for (let i = 0; i < 5; i++) {
+// 	let a = mathRandInt(3, 10),
+// 		b = mathRandInt(3, 10),
+// 		resUsers,
+// 		resTrim = '',
+// 		randSigns = mathRandInt(0, 3),
+// 		randZnak,
+// 		c
+// 		randSigns(a, b)
+// 	if (randSigns == 0) {
+// 		randZnak = '+'
+// 		c = a + b
+// 	} else if (randSigns == 1) {
+// 		randZnak = '-'
+// 		c = a - b
+// 	} else if (randSigns == 2) {
+// 		randZnak = '*'
+// 		c = a * b
+// 	} else if (randSigns == 3) {
+// 		randZnak = '/'
+// 		c = a / b
+// 	}
+// 	do {
+// 		resTrim = '',
+// 			resUsers = prompt(`Решите пример ${a} ${randZnak} ${b} = ?`)
+// 		if (resUsers !== null) {
+// 			for (let i = 0; i < resUsers.length; i++) {
+// 				if (resUsers[i].trim()) {
+// 					resTrim += resUsers[i]
+// 				}
+// 			}
+// 		}
+// 	} while (resTrim === '' || resUsers === null || Number.isNaN(+resTrim))
+// 	{
+// 		if (resTrim == c) {
+// 			console.log(`Решение верно: ${a} ${randZnak} ${b} = ${resTrim}`)
+// 		} else {
+// 			console.log(`Решение не верно: ${a} ${randZnak} ${b} = ${resTrim} правильный ответ: ${c}`)
+// 		}
+// 	}
+// }
+
+// function mathRandInt(min, max) {
+// 	return Math.round(Math.random() * (max - min) + min)
+// }
+// for (let i = 0; i < 5; i++) {
+// 	let a = mathRandInt(3, 10),
+// 		b = mathRandInt(3, 10),
+// 		resUsers,
+// 		resTrim = '',
+// 		randSigns = mathRandInt(0, 3),
+// 		randZnak,
+// 		c
+// 	if (randSigns == 0) {
+// 		randZnak = '+'
+// 		c = a + b
+// 	} else if (randSigns == 1) {
+// 		randZnak = '-'
+// 		c = a - b
+// 	} else if (randSigns == 2) {
+// 		randZnak = '*'
+// 		c = a * b
+// 	} else if (randSigns == 3) {
+// 		randZnak = '/'
+// 		c = a / b
+// 	}
+// 	do {
+// 		resTrim = '',
+// 			resUsers = prompt(`Решите пример ${a} ${randZnak} ${b} = ?`)
+// 		if (resUsers !== null) {
+// 			for (let i = 0; i < resUsers.length; i++) {
+// 				if (resUsers[i].trim()) {
+// 					resTrim += resUsers[i]
+// 				}
+// 			}
+// 		}
+// 	} while (resTrim === '' || resUsers === null || Number.isNaN(+resTrim))
+// 	{
+// 		if (resTrim == c) {
+// 			console.log(`Решение верно: ${a} ${randZnak} ${b} = ${resTrim}`)
+// 		} else {
+// 			console.log(`Решение не верно: ${a} ${randZnak} ${b} = ${resTrim} правильный ответ: ${c}`)
+// 		}
+// 	}
+// }
 
 // https://stepik.org/course/180784/promo?search=4566353655
 
