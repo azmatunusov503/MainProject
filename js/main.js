@@ -1522,7 +1522,7 @@ console.log(data);
 // 			this._last = this._head
 // 			this._length++
 // 		} else {
-// 			let nextNode = this._head
+// 			let nextNode = this._head`
 // 			this._head = new Node(value)
 // 			nextNode.previous = this._head
 // 			this._head.next = nextNode
