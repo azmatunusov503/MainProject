@@ -1,4 +1,5 @@
 // Основы JS
+/* <- === === === === === === === === === === === === === ===  Типы данных  === === === === === === === === === === === === === === -> */
 
 // типы данных
 
@@ -20,7 +21,9 @@
 // console.log(n)
 // console.log(nan)
 
-// математические операции
+/* <- === === === === === === === === === === === === === ===  Типы данных end  === === === === === === === === === === === === === === -> */
+
+/* <- === === === === === === === === === === === === === ===  Математические операции  === === === === === === === === === === === === === === -> */
 
 // let a = 27
 // let b = 7
@@ -50,6 +53,7 @@
 // 13 / 9 = 1
 // 9 * 1 = 9
 // 13 - 9 = 4
+/* <- === === === === === === === === === === === === === ===  Математические операции end  === === === === === === === === === === === === === === -> */
 
 // Операторы сравнение (Операторы булевой логики 'true' 'false')
 
@@ -60,7 +64,6 @@
 // console.log(true !== true);
 // console.log(true == 1);
 // console.log(false == 0);
-
 
 // console.log(13 % 9);
 // console.log(2 + 2 === 13 % 9);
@@ -871,8 +874,6 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // 	console.log(`Степень ${n} не поддерживается, используйте натуральное число`)
 // }
 
-
-
 // function pow1(x, n){
 // 	return x **n
 // }
@@ -930,7 +931,6 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 
 // // Выводим куб в консоль
 // console.log(cube);
-
 
 /* <- === === === === === === ===  Задачи === === === === === === === -> */
 
@@ -1077,7 +1077,6 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // 	return Math.round(Math.random() * (max - min) + min)
 // }
 
-
 // function definitionSing(randSigns){
 // 	let randZnak
 // 	if (randSigns == 0) {
@@ -1201,11 +1200,7 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // 	console.log(`Код правильно выполнился`)
 // }
 
-// OBJECT
-
-
-
-
+/* <- === === === === === === === === === === === === === ===  Объекты  === === === === === === === === === === === === === === -> */
 
 // const user = {
 // 	name: 'John',
@@ -1220,31 +1215,10 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // console.log(user)
 // user.fn
 
-const users = {
-	1: {
-		name: 'den',
-		age: 20,
-	},
-	2: {
-		name: 'Mike',
-		age: 21,
-	},
-	3: {
-		name: 'John',
-		age: 30,
-	},
-}
-
-for(let i in users){
-	// console.log(users[i])
-	for(let key in users[i]){
-		console.log(users[i][key])
-	}
-}
-
-
 // let login = prompt('Ведите имя пользователя'),
-// 	str
+// 				ageUser = Number(prompt('Введите возраст')),
+// 				ageRes,
+// 				str
 
 // const userObj = {
 // 	1: {
@@ -1261,24 +1235,29 @@ for(let i in users){
 // 	},
 // }
 
-// for (let i in userObj) {
-// 	console.log(userObj[i].name)
-// 	if (login == userObj[i].name) {
+// for(let i in userObj){
+// 	if(login == userObj[i].name){
 // 		str = userObj[i].name
 // 	}
+// 	if(ageUser == userObj[i].age){
+// 		ageRes = userObj[i].age
+// 	}else{
+// 		ageRes = 'не верно указан'
+// 	}
+
 // }
-// if (login == str) {
-// 	console.log(`Вы ${str} зарегистрированы`)
-// } else {
-// 	console.log(`Вы не зарегистрированы`)
+// if(login == str){
+// 	alert(`Вы ${str} зарегистрированы, ваш возраст ${ageRes}`)
+// }else{
+// 	alert(`Вы не зарегистрированы`)
 // }
 
 // const users = {}
 // for (let i = 0; i < 4; i++) {
 // 	let text = prompt('Тектс')
-// 	users[i] = {info: text}
+// 	users[i] = {[i]: text}
 // }
-
+// console.log(users)
 // console.log(users)
 // console.log(Math);
 
@@ -1312,7 +1291,9 @@ for(let i in users){
 // 	console.log(pannier[key].info)
 // }
 
-// Массивы Math
+/* <- === === === === === === === === === === === === === ===  Объекты end  === === === === === === === === === === === === === === -> */
+
+/* <- === === === === === === === === === === === === === ===  Массивы  === === === === === === === === === === === === === === -> */
 
 // const arr = [1, 2, 3, 4, 5, 6, 7]
 
@@ -1398,3 +1379,225 @@ console.log(`Колличество чётных чисел = ${chetNum}`)
 console.log(`Колличество не чётных чисел = ${neChetNum}`) */
 
 // console.log(`hello Azamat`)
+
+/* <- === === === === === === === === === === === === === ===  Массивы end  === === === === === === === === === === === === === === -> */
+
+
+
+/* <- === === === === === === === === === === === === === ===  Не понятно что это пока  === === === === === === === === === === === === === === -> */
+/* <- === === === === === === ===  Задачи === === === === === === === -> */
+
+/* // Запрашиваем данные у пользователя
+const numLevels = parseInt(prompt("Введите количество уровней объекта:"));
+const data = [];
+
+// Создаем многомерный объект
+for (let i = 0; i < numLevels; i++) {
+  const level = {};
+  const numKeys = parseInt(prompt(`Введите количество ключей для уровня ${i + 1}:`));
+
+  for (let j = 0; j < numKeys; j++) {
+    const key = prompt(`Введите ключ ${j + 1} для уровня ${i + 1}:`);
+    const value = prompt(`Введите значение для ключа ${key}:`);
+    level[key] = value;
+  }
+
+  data.push(level);
+}
+
+console.log(data);
+ */
+
+// class Llist {
+// 	constructor() {
+// 					this._length = 0;
+// 					this._head = null;
+// 					this._last = null;
+// 	}
+// 	addItems(...arr) {
+// 					if (arr.length === 1) {
+// 									this._head = new Node(arr[0]);
+// 									this._last = this._head;
+// 									this._length++;
+// 					} else if (arr.length > 1) {
+// 									this._head = new Node(arr[0]);
+// 									this._last = this._head;
+// 									this._length++;
+// 									let currentNode = this._head;
+// 									for (let i = 1; i < arr.length; i++) {
+// 													currentNode.next = new Node(arr[i], currentNode);
+// 													this._length++;
+// 													this._last = currentNode.next;
+// 													currentNode = currentNode.next;
+// 									}
+// 									return true;
+// 					}
+// 	}
+// class Node {
+// 	constructor(value, previous = null) {
+// 		this.value = value
+// 		this.next = null
+// 		this.previous = previous
+// 	}
+// }
+
+// class Llist {
+// 	constructor() {
+// 		this._length = 0
+// 		this._head = null
+// 		this._last = null
+// 	}
+// 	addItems(...arr) {
+// 		if (arr.length === 1) {
+// 			this._head = new Node(arr[0])
+// 			this._last = this._head
+// 			this._length++
+// 		} else if (arr.length > 1) {
+// 			this._head = new Node(arr[0])
+// 			this._last = this._head
+// 			this._length++
+// 			let currentNode = this._head
+// 			for (let i = 1; i < arr.length; i++) {
+// 				currentNode.next = new Node(arr[i], currentNode)
+// 				this._length++
+// 				this._last = currentNode.next
+// 				currentNode = currentNode.next
+// 			}
+// 			return true
+// 		}
+// 	}
+// 	push(value) {
+// 		if (!this._head) {
+// 			this._head = new Node(value)
+// 			this._last = this._head
+// 		} else {
+// 			this._last = this._last.next = new Node(value, this._last)
+// 		}
+// 		this._length++
+// 		return value
+// 	}
+// 	pop() {
+// 		if (!this._head) {
+// 			new Error(
+// 				'LinkedList empty. Please use Llist.pop() or Llist.addItems() for add item'
+// 			)
+// 		} else {
+// 			let value = this._last.value
+// 			if (this._length === 1) {
+// 				this._head = null
+// 				this._last = null
+// 				this._length = 0
+// 			} else {
+// 				this._last = this._last.previous
+// 				this._last.next = null
+// 				this._length--
+// 			}
+// 			return value
+// 		}
+// 	}
+// 	shift() {
+// 		if (!this._head) {
+// 			console.log(
+// 				new Error(
+// 					'LinkedList empty. Please use Llis.pop() or Llist.addItems() for add item'
+// 				)
+// 			)
+// 		} else {
+// 			let value = this._head.value
+// 			if (this._length === 1) {
+// 				this._head = null
+// 				this._last = null
+// 				this._length = 0
+// 			} else {
+// 				this._head = this._head.next
+// 				this._head.previous = null
+// 				this._length--
+// 			}
+// 			return value
+// 		}
+// 	}
+// 	unshift(value) {
+// 		if (this._length === 0) {
+// 			this._head = new Node(value)
+// 			this._last = this._head
+// 			this._length++
+// 		} else {
+// 			let nextNode = this._head
+// 			this._head = new Node(value)
+// 			nextNode.previous = this._head
+// 			this._head.next = nextNode
+// 			this._length++
+// 		}
+// 	}
+// 	getItem(index) {
+// 		let currentNode = this._head
+// 		if (index === 0) {
+// 			return currentNode.value
+// 		} else if (index >= this._length) {
+// 			return null
+// 		}
+// 		for (let i = 1; i <= index; i++) {
+// 			currentNode = currentNode.next
+// 		}
+// 		return currentNode.value
+// 	}
+
+// 	splice(start, end = this._length - 1) {
+// 		let currentNodeStart = this._head
+// 		for (let i = 0; i < start - 1; i++) {
+// 			currentNodeStart = currentNodeStart.next
+// 		}
+// 		let currentNodeEnd = currentNodeStart
+// 		if (end === this._length - 1 || end === 0) {
+// 			currentNodeEnd.previous = currentNodeStart.previous
+// 			currentNodeStart.next = null
+// 			let currentNode = this._head
+// 			this._length = 0
+// 			while (currentNode) {
+// 				currentNode = currentNode.next
+// 				this._length++
+// 			}
+// 			this._last = currentNodeStart
+// 			return this._head
+// 		}
+// 		for (let i = 0; i <= end; i++) {
+// 			currentNodeEnd = currentNodeEnd.next
+// 		}
+
+// 		if (start === 0) {
+// 			this._head = currentNodeEnd
+// 		} else {
+// 			currentNodeStart.next = currentNodeEnd
+// 		}
+
+// 		currentNodeEnd.previous = currentNodeStart
+
+// 		let currentNode = this._head
+// 		this._length = 0
+// 		while (currentNode) {
+// 			currentNode = currentNode.next
+// 			this._length++
+// 		}
+// 		return this._head
+// 	}
+
+// 	toArray() {
+// 		let arr = []
+// 		let currentNode = this._head
+// 		while (currentNode) {
+// 			arr.push(currentNode.value)
+// 			currentNode = currentNode.next
+// 		}
+// 		return arr
+// 	}
+// 	get length() {
+// 		return this._length
+// 	}
+// }
+
+// let d = new Llist()
+// console.log(d)
+// d.push(2)
+// d.push(3)
+// console.log(d)
+
