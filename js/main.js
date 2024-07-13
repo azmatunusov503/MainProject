@@ -1252,14 +1252,36 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // 	alert(`Вы не зарегистрированы`)
 // }
 
-// const users = {}
-// for (let i = 0; i < 4; i++) {
-// 	let text = prompt('Тектс')
-// 	users[i] = {[i]: text}
-// }
-// console.log(users)
-// console.log(users)
-// console.log(Math);
+/* 
+const users = {}
+for (let i = 0; i < 4; i++) {
+	let text = prompt('Тектс')
+	users[i] = {[i]: text}
+}
+console.log(users)
+ */
+
+/* 
+// Запрашиваем данные у пользователя
+const numLevels = parseInt(prompt("Введите количество уровней объекта:")),
+					data = []
+
+// Создаем многомерный объект
+for (let i = 0; i < numLevels; i++) {
+  const level = {},
+  						numKeys = parseInt(prompt(`Введите количество ключей для уровня ${i + 1}:`))
+
+  for (let j = 0; j < numKeys; j++) {
+    const key = prompt(`Введите ключ ${j + 1} для уровня ${i + 1}:`),
+    						value = prompt(`Введите значение для ключа ${key}:`),
+    level[key] = value
+  }
+
+  data.push(level)
+}
+
+console.log(data)
+*/
 
 // let str = new String('lorem rem'),
 // 	str2 = ''
@@ -1382,31 +1404,8 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 
 /* <- === === === === === === === === === === === === === ===  Массивы end  === === === === === === === === === === === === === === -> */
 
-
-
 /* <- === === === === === === === === === === === === === ===  Не понятно что это пока  === === === === === === === === === === === === === === -> */
 /* <- === === === === === === ===  Задачи === === === === === === === -> */
-
-/* // Запрашиваем данные у пользователя
-const numLevels = parseInt(prompt("Введите количество уровней объекта:"));
-const data = [];
-
-// Создаем многомерный объект
-for (let i = 0; i < numLevels; i++) {
-  const level = {};
-  const numKeys = parseInt(prompt(`Введите количество ключей для уровня ${i + 1}:`));
-
-  for (let j = 0; j < numKeys; j++) {
-    const key = prompt(`Введите ключ ${j + 1} для уровня ${i + 1}:`);
-    const value = prompt(`Введите значение для ключа ${key}:`);
-    level[key] = value;
-  }
-
-  data.push(level);
-}
-
-console.log(data);
- */
 
 // class Llist {
 // 	constructor() {
@@ -1522,7 +1521,7 @@ console.log(data);
 // 			this._last = this._head
 // 			this._length++
 // 		} else {
-// 			let nextNode = this._head`
+// 			let nextNode = this._head
 // 			this._head = new Node(value)
 // 			nextNode.previous = this._head
 // 			this._head.next = nextNode
@@ -1600,4 +1599,3 @@ console.log(data);
 // d.push(2)
 // d.push(3)
 // console.log(d)
-

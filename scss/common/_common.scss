@@ -1,0 +1,45 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	font-family: 'roboto';
+	font-weight: 400;
+	&::before, &::after{
+			font-family: 'icons';
+	}
+}
+:root{
+	--white: #ffffff;
+	--black: #2C2A2A;
+	--dark: #313131;
+	--grey-text: #D47300;
+	--grey: #9B9B9B;
+	--bg: #322E41;
+	--bg-light: #EBEBEB; 
+}
+$white: var(--white);
+$black: var(--black);
+$dark: var(--dark);
+$grey: var(--grey);
+$grey-text: var(--grey-text);
+$bg: var(--bg);
+$bg-light: var(--bg-light);
+
+.icon{
+	&-chevron::before{content: '\f077'; font-weight: 300;}
+	&-user::before{content: '\f007'; font-weight: 300;}
+	&-cart::before{content: '\f07a'; font-weight: 300;}
+	&-search::before{content: '\f002'; font-weight: 300;}
+	&-heart::before{content: '\f004'; font-weight: 300;}
+	&-phone::before{content: '\f879'; font-weight: 300;}
+	&-telegram::before{content: '\f3fe'; font-weight: 400;}
+	&-facebook::before{content: '\f09a'; font-weight: 400;}
+	&-instagram::before{content: '\f16d'; font-weight: 400;}
+}
+.container{
+	@include container();
+	min-height: 65px;
+	border: 1px solid red;
+}
