@@ -856,13 +856,53 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 */
 
 // function pow(x, n){
-// 	return x ** n
+// 	let result = x
+// 	for(let i = 1; i < n; i++){
+// 		result *= x
+// 	}
+// 	return result
 // }
-// console.log(pow(3, 2))
 
-/* <- === === === === === === ===  Не решен  === === === === === === === -> */
+// let x = prompt(`x?`)
+// let n = prompt(`n?`)
+// if(n >= 1 && n % 1 == 0){
+// 	console.log(pow(x,n))
+// }else{
+// 	console.log(`Степень ${n} не поддерживается, используйте натуральное число`)
+// }
 
 
+
+// function pow1(x, n){
+// 	return x **n
+// }
+// console.log(pow1(21, 12))
+
+/* <- === === === === === === ===  Задачи  === === === === === === === -> */
+
+// Калбэк
+
+// function ask(question, yes, no){
+// 	if(confirm(question))yes()
+// 	else no()
+// }
+// function showOk(){
+// 	alert('Вы согласны')
+// }
+// function showCancel(){
+// 	alert('Вы отменили выполнение.')
+// }
+// ask('Вы согласны ?', showOk, showCancel)
+
+// function ask(question, yes, no){
+// 	if(confirm(question)) yes()
+// 	else no()
+// }
+// ask(
+// 	'Вы согласны ?',
+// 	function(){alert('Вы согласились.')},
+// 	function(){alert('Вы от.')}
+// )
 
 /* <- === === === === === === ===  Задачи  === === === === === === === -> */
 
@@ -1036,59 +1076,43 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // function mathRandInt(min, max) {
 // 	return Math.round(Math.random() * (max - min) + min)
 // }
-// let a = mathRandInt(3, 10),
-// 				b = mathRandInt(3, 10),
-// 				randZnak
-// function calcRandSigns(a, b, randZnak){
-// 	let randSigns = mathRandInt(0, 3),
-// 					c,
-// 					calcRandZnak = randZnak
-// 	if (randSigns == 0) {
-// 		return(
-// 			randZnak = '+',
-// 			c = a + b
-// 		)
-// 	} else if (randSigns == 1) {
-// 		return(
-// 			randZnak = '-',
-// 		c = a - b
-// 	)
-// 	} else if (randSigns == 2) {
-// 		return(
-// 			randZnak = '*',
-// 			c = a * b
-// 		)
-// 	} else if (randSigns == 3) {
-// 		return(
-// 			randZnak = '/',
-// 		c = a / b
-// 	)
-// 	}
-// }
 
-// console.log(calcRandSigns(a, b, randZnak))
-// for (let i = 0; i < 5; i++) {
-// 	let a = mathRandInt(3, 10),
-// 		b = mathRandInt(3, 10),
-// 		resUsers,
-// 		resTrim = '',
-// 		randSigns = mathRandInt(0, 3),
-// 		randZnak,
-// 		c
-// 		randSigns(a, b)
+
+// function definitionSing(randSigns){
+// 	let randZnak
 // 	if (randSigns == 0) {
 // 		randZnak = '+'
-// 		c = a + b
 // 	} else if (randSigns == 1) {
 // 		randZnak = '-'
-// 		c = a - b
 // 	} else if (randSigns == 2) {
 // 		randZnak = '*'
-// 		c = a * b
 // 	} else if (randSigns == 3) {
 // 		randZnak = '/'
+// 	}
+// 	return randZnak
+// }
+// function calcRandAnswer(a, b, randSigns){
+// 	let c
+// 	if (randSigns == 0) {
+// 		c = a + b
+// 	} else if (randSigns == 1) {
+// 		c = a - b
+// 	} else if (randSigns == 2) {
+// 		c = a * b
+// 	} else if (randSigns == 3) {
 // 		c = a / b
 // 	}
+// 	return c
+// }
+
+// for (let i = 0; i < 5; i++) {
+// 	let a = mathRandInt(3, 10),
+// 				b = mathRandInt(3, 10),
+// 				randSigns = mathRandInt(0, 3),
+// 				randZnak = definitionSing(randSigns),
+// 				randAnswer = calcRandAnswer(a, b, randSigns),
+// 				resTrim = '',
+// 				resUsers
 // 	do {
 // 		resTrim = '',
 // 			resUsers = prompt(`Решите пример ${a} ${randZnak} ${b} = ?`)
@@ -1101,10 +1125,10 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // 		}
 // 	} while (resTrim === '' || resUsers === null || Number.isNaN(+resTrim))
 // 	{
-// 		if (resTrim == c) {
+// 		if (resTrim == randAnswer) {
 // 			console.log(`Решение верно: ${a} ${randZnak} ${b} = ${resTrim}`)
 // 		} else {
-// 			console.log(`Решение не верно: ${a} ${randZnak} ${b} = ${resTrim} правильный ответ: ${c}`)
+// 			console.log(`Решение не верно: ${a} ${randZnak} ${b} = ${resTrim} правильный ответ: ${randAnswer}`)
 // 		}
 // 	}
 // }
@@ -1115,9 +1139,9 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // for (let i = 0; i < 5; i++) {
 // 	let a = mathRandInt(3, 10),
 // 		b = mathRandInt(3, 10),
+// 		randSigns = mathRandInt(0, 3),
 // 		resUsers,
 // 		resTrim = '',
-// 		randSigns = mathRandInt(0, 3),
 // 		randZnak,
 // 		c
 // 	if (randSigns == 0) {
@@ -1179,6 +1203,10 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 
 // OBJECT
 
+
+
+
+
 // const user = {
 // 	name: 'John',
 // 	age: 20,
@@ -1191,6 +1219,29 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // user.name = 'Azamat'
 // console.log(user)
 // user.fn
+
+const users = {
+	1: {
+		name: 'den',
+		age: 20,
+	},
+	2: {
+		name: 'Mike',
+		age: 21,
+	},
+	3: {
+		name: 'John',
+		age: 30,
+	},
+}
+
+for(let i in users){
+	// console.log(users[i])
+	for(let key in users[i]){
+		console.log(users[i][key])
+	}
+}
+
 
 // let login = prompt('Ведите имя пользователя'),
 // 	str
