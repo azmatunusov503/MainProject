@@ -1613,18 +1613,17 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 
 
 function pow(x, n){
-	// let result = x
-	// for(let i = 1; i < n; i++){
-	// 	result *= x
-	// }
-	return 27
+	let result = x
+	for(let i = 1; i < n; i++){
+		result *= x
+	}
+	return result
 }
 
 describe('pow', function() {
 
 	it("2 в степени 3 будет 8", function() {
-			assert.equal(pow(3, 3), 27)
-			// assert.equal(pow(2, 3), 8)
+			assert.equal(pow(2, 3), 8)
 	});
 	it("3 в степени 3 будет 27", function() {
 		assert.equal(pow(3, 3), 27);
