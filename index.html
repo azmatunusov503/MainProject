@@ -4,10 +4,23 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- добавим стили mocha для отображения результатов -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+	<!-- добавляем сам фреймворк mocha -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+	<script>
+			// включаем режим тестирования в стиле BDD
+			mocha.setup('bdd');
+	</script>
+	<!-- добавим chai -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+	<script>
+			// chai предоставляет большое количество функций. Объявим assert глобально
+			let assert = chai.assert;
+	</script>
 	<link rel="website icon" type="png" href="images/js.png">
 	<title>JS</title>
-	<script src="js/main.js" defer></script>
-	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
 
 <body>
@@ -273,6 +286,12 @@
 			<div class="snow"></div>
 		</div>
 	</div>
+	<script src="js/main.js"></script>
+	<div id="mocha"></div>
+	<script>
+		mocha.run();
+	</script>
+	
 </body>
 
 

@@ -1252,36 +1252,44 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // 	alert(`Вы не зарегистрированы`)
 // }
 
-/* 
-const users = {}
-for (let i = 0; i < 4; i++) {
-	let text = prompt('Тектс')
-	users[i] = {[i]: text}
-}
-console.log(users)
- */
+// const numLevels = parseInt(prompt("Введите количество уровней объекта:")),
+// 					data = []
 
-/* 
-// Запрашиваем данные у пользователя
-const numLevels = parseInt(prompt("Введите количество уровней объекта:")),
-					data = []
+// 	for (let i = 0; i < numLevels; i++) {
+// 		const level = {},
+// 								numKeys = parseInt(prompt(`Введите количество ключей для уровня ${i + 1}:`))
 
-// Создаем многомерный объект
-for (let i = 0; i < numLevels; i++) {
-  const level = {},
-  						numKeys = parseInt(prompt(`Введите количество ключей для уровня ${i + 1}:`))
+// 	for (let j = 0; j < numKeys; j++) {
+// 		const key = prompt(`Введите ключ ${j + 1} для уровня ${i + 1}`)
 
-  for (let j = 0; j < numKeys; j++) {
-    const key = prompt(`Введите ключ ${j + 1} для уровня ${i + 1}:`),
-    						value = prompt(`Введите значение для ключа ${key}:`),
-    level[key] = value
-  }
+// 								/* value = prompt(`Введите значение для ключа ${key}:`)
+// 								level[key] = value */
 
-  data.push(level)
-}
+// 		for (let n = 0; n < key; n++) {
+// 			const item = prompt(`Введите ключ ${n + 1} для уровня ${j + 1}`),
+// 				value = prompt(`Введите значение для ключа ${item}:`)
+// 		}
+// 	}
+// 	data.push(level)
+// }
+// console.log(data)
 
-console.log(data)
-*/
+// const newObject = {
+// 	name: 'level1',
+// 	1: {
+// 		name: 'level2',
+// 		1: {
+// 			1: 'level2.1'
+// 		},
+// 		2: {
+// 			1: 'level2.2'
+// 		},
+// 	}
+// }
+// for(let i in newObject){
+
+// }
+
 
 // let str = new String('lorem rem'),
 // 	str2 = ''
@@ -1599,3 +1607,27 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // d.push(2)
 // d.push(3)
 // console.log(d)
+
+
+/* <- === === === === === === === === === === === === === ===  Авто тестирование  === === === === === === === === === === === === === === -> */
+
+
+function pow(x, n){
+	// let result = x
+	// for(let i = 1; i < n; i++){
+	// 	result *= x
+	// }
+	return 27
+}
+
+describe('pow', function() {
+
+	it("2 в степени 3 будет 8", function() {
+			assert.equal(pow(3, 3), 27)
+			// assert.equal(pow(2, 3), 8)
+	});
+	it("3 в степени 3 будет 27", function() {
+		assert.equal(pow(3, 3), 27);
+});
+
+});
