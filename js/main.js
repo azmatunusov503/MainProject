@@ -1677,3 +1677,6 @@ describe("тест", function() {
 	it('тест 2', () => alert(2));
 
 });
+
+
+console.log('Test')
