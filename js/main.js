@@ -1678,15 +1678,3 @@ describe("тест", function() {
 
 });
 
-
-<<<<<<< HEAD
-console.log('Test')
-
-console.log ('Azamat2')
-=======
-console.log('Test') 
-
-
-
-console.log('Azamat')
->>>>>>> 661e7929492df62c1c1f51184beec49db5d0ca7c
