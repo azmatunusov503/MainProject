@@ -1620,13 +1620,60 @@ function pow(x, n){
 	return result
 }
 
-describe('pow', function() {
+// describe('pow', function() {
 
-	it("2 в степени 3 будет 8", function() {
-			assert.equal(pow(2, 3), 8)
-	});
-	it("3 в степени 3 будет 27", function() {
-		assert.equal(pow(3, 3), 27);
-});
+// 	it("2 в степени 3 будет 8", function() {
+// 			assert.equal(pow(2, 3), 8)
+// 	});
+// 	it("3 в степени 3 будет 27", function() {
+// 		assert.equal(pow(3, 3), 27);
+// });
+
+// });
+// describe('pow', function(){
+// 	function makeTest(x){
+// 		let expected = x * x * x * x * x
+// 		it(`${x} в степени 5 будет ${expected}`, function(){
+// 			assert.equal(pow(x, 5), expected)
+// 		})
+// 	}
+// 	for (let i = 1; i <= 10; i++){
+// 		makeTest(i)
+// 	}
+// })
+
+// let resPow = 100
+// describe('pow',function(){
+// 	describe(`Возводит x в степень ${resPow}`, function(){
+// 		function makeTest(x, n){
+// 			let expected = x ** n
+// 			it(`${x} в степени ${n} равен ${expected}`, function(){
+// 				assert.equal(pow(x, resPow), expected)
+// 			})
+// 		}
+// 		for(let i = 1; i <= 5; i++){
+// 			makeTest(i, resPow)
+// 		}
+// 	})
+// })
+
+
+/* Возведение в степень */
+// console.log(3 ** 4)
+
+// console.log(3 * 3 * 3 * 3)
+
+
+
+describe("тест", function() {
+
+	before(() => alert("Тестирование началось – перед тестами"));
+	after(() => alert("Тестирование закончилось – после всех тестов"));
+
+	beforeEach(() => alert("Перед тестом – начинаем выполнять тест"));
+	afterEach(() => alert("После теста – заканчиваем выполнение теста"));
+
+	it('тест 1', () => alert(1));
+	it('тест 2', () => alert(2));
 
 });
