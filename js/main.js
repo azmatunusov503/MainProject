@@ -1612,13 +1612,13 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 /* <- === === === === === === === === === === === === === ===  Авто тестирование  === === === === === === === === === === === === === === -> */
 
 
-function pow(x, n){
-	let result = x
-	for(let i = 1; i < n; i++){
-		result *= x
-	}
-	return result
-}
+// function pow(x, n){
+// 	let result = x
+// 	for(let i = 1; i < n; i++){
+// 		result *= x
+// 	}
+// 	return result
+// }
 
 // describe('pow', function() {
 
@@ -1642,7 +1642,33 @@ function pow(x, n){
 // 	}
 // })
 
-// let resPow = 100
+
+// function pow(x, n){
+// 	if(n < 0) return NaN
+// 	if(Math.round(n) != n) return NaN
+// 	let result = x
+// 	for(let i = 1; i < n; i++){
+// 		result *= x
+// 	}
+// 	return result
+// }
+
+
+// describe("pow", function() {
+
+// 	// ...
+
+// 	it("для отрицательных n возвращает NaN", function() {
+// 			assert.isNaN(pow(2, -1));
+// 	});
+
+// 	it("для дробных n возвращает NaN", function() {
+// 			assert.isNaN(pow(2, 1.5));
+// 	});
+
+// });
+
+// let resPow = 10
 // describe('pow',function(){
 // 	describe(`Возводит x в степень ${resPow}`, function(){
 // 		function makeTest(x, n){
@@ -1658,6 +1684,31 @@ function pow(x, n){
 // })
 
 
+// let powRes = 3
+// describe('Функция возведения в степень pow', function(){
+// 	before(() => {});
+// 	after(() => {});
+
+// 	function makeTest(x, n){
+// 		let expected = x ** n
+// 		it.only(`Возводит ${x} в степень ${n}`, function(){
+// 			assert.equal(pow(x, n), expected)
+// 		})
+// 	}
+// 	for(let i = 1; i <= 5; i++){
+// 		makeTest(i, powRes)
+// 	}
+
+
+	
+// 		beforeEach(() => {});
+// 		afterEach(() => {});
+	
+// 		it('тест 1', () => alert(1));
+// 		it('тест 2', () => alert(2))
+// })
+
+
 /* Возведение в степень */
 // console.log(3 ** 4)
 
@@ -1665,16 +1716,17 @@ function pow(x, n){
 
 
 
-describe("тест", function() {
+// describe("тест", function() {
 
-	before(() => alert("Тестирование началось – перед тестами"));
-	after(() => alert("Тестирование закончилось – после всех тестов"));
+// 	before(() => alert("Тестирование началось – перед тестами"));
+// 	after(() => alert("Тестирование закончилось – после всех тестов"));
 
-	beforeEach(() => alert("Перед тестом – начинаем выполнять тест"));
-	afterEach(() => alert("После теста – заканчиваем выполнение теста"));
+// 	beforeEach(() => alert("Перед тестом – начинаем выполнять тест"));
+// 	afterEach(() => alert("После теста – заканчиваем выполнение теста"));
 
-	it('тест 1', () => alert(1));
-	it('тест 2', () => alert(2));
+// 	it('тест 1', () => alert(1));
+// 	it('тест 2', () => alert(2));
 
-});
+// });
 
+/* <- === === === === === === === === === === === === === ===  Авто тестирование end  === === === === === === === === === === === === === === -> */
