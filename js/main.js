@@ -1230,6 +1230,19 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // console.log(user)
 // user.fn
 
+const telCoders = {
+	'49': 'Германия',
+	'41': 'Швейцария',
+	'44': 'Великобритания',
+	/* -------------------- */
+	'1': 'USA'
+}
+for(let key in telCoders){
+	console.log(key)
+}
+
+
+
 // let login = prompt('Ведите имя пользователя'),
 // 				ageUser = Number(prompt('Введите возраст')),
 // 				ageRes,
@@ -1750,76 +1763,77 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 
 /* <- === === === === === === === === === === === === === ===  Code Wars  === === === === === === === === === === === === === === -> */
 
-class DataTime {
-	constructor(seconds) {
-			this.seconds = seconds;
-	}
-	arrayData = [];
+// class DataTime {
+// 	constructor(seconds) {
+// 			this.seconds = seconds;
+// 	}
+// 	arrayData = [];
 
-			getMinutes() {
-							return Math.floor(this.seconds / 60);
-			}
+// 			getMinutes() {
+// 							return Math.floor(this.seconds / 60);
+// 			}
 
-			getHours() {
-							if (this.seconds < 3600) {
-											return 0;
-							}
-							let hours = Math.floor(this.seconds / 3600);
-							this.seconds -= hours * 3600;
-							return hours;
-			}
+// 			getHours() {
+// 							if (this.seconds < 3600) {
+// 											return 0;
+// 							}
+// 							let hours = Math.floor(this.seconds / 3600);
+// 							this.seconds -= hours * 3600;
+// 							return hours;
+// 			}
 
-			getDays() {
-							if (this.seconds < 86400) {
-											return 0;
-							}
-							let days = Math.floor(this.seconds / 86400);
-							this.seconds -= days * 86400;
-							return days;
-			}
+// 			getDays() {
+// 							if (this.seconds < 86400) {
+// 											return 0;
+// 							}
+// 							let days = Math.floor(this.seconds / 86400);
+// 							this.seconds -= days * 86400;
+// 							return days;
+// 			}
 
 
-			getYears() {
-							if (this.seconds < 31536000) {
-											return 0;
-							}
-							let years = Math.floor(this.seconds / 31536000);
-							this.seconds -= years * 31536000;
-							return years;
-			}
+// 			getYears() {
+// 							if (this.seconds < 31536000) {
+// 											return 0;
+// 							}
+// 							let years = Math.floor(this.seconds / 31536000);
+// 							this.seconds -= years * 31536000;
+// 							return years;
+// 			}
 
-			getSeconds() {
-							return this.seconds % 60;
-			}
+// 			getSeconds() {
+// 							return this.seconds % 60;
+// 			}
 
-			addS = (el) => {
-							const num = +el.split(' ')[0];
-							return el + (num > 1 ? 's' : '');
-			}
+// 			addS = (el) => {
+// 							const num = +el.split(' ')[0];
+// 							return el + (num > 1 ? 's' : '');
+// 			}
 			
 
-			getArrayData() {
-							let array = [
-											`${this.getYears()} year`,
-											`${this.getDays()} day`,
-											`${this.getHours()} hour`,
-											`${this.getMinutes()} minute`,
-											`${this.getSeconds()} second`
-							];
-							this.arrayData = array.filter(el => el.split(' ')[0] !== '0').map(this.addS);
-							return this.arrayData;
-			}
-}
+// 			getArrayData() {
+// 							let array = [
+// 											`${this.getYears()} year`,
+// 											`${this.getDays()} day`,
+// 											`${this.getHours()} hour`,
+// 											`${this.getMinutes()} minute`,
+// 											`${this.getSeconds()} second`
+// 							];
+// 							this.arrayData = array.filter(el => el.split(' ')[0] !== '0').map(this.addS);
+// 							return this.arrayData;
+// 			}
+// }
 
 
 
 
-function formatDuration (seconds) {
-			if (!seconds) return 'now'
-			const dataArray = new DataTime(seconds).getArrayData();
-			if (dataArray.length === 1) {
-					return dataArray[0];
-			}
-			const lastEl = ' and ' + dataArray[dataArray.length - 1];
-			return dataArray.slice(0, dataArray.length - 1).join(', ') + lastEl;
-	}
+// function formatDuration (seconds) {
+// 			if (!seconds) return 'now'
+// 			const dataArray = new DataTime(seconds).getArrayData();
+// 			if (dataArray.length === 1) {
+// 					return dataArray[0];
+// 			}
+// 			const lastEl = ' and ' + dataArray[dataArray.length - 1];
+// 			return dataArray.slice(0, dataArray.length - 1).join(', ') + lastEl;
+// 	}
+// console.log(formatDuration(36000))
