@@ -829,6 +829,20 @@ for(let i = 0; i < resUser * 2 - 1; i++){
 // 	() => alert('Вы отменили выполнение')
 // )
 
+
+/* <- === === === === === === ===  Замыкание  === === === === === === === -> */
+
+function outerFunction(){
+	const outerVar = 'Внешний переменный'
+	function innerFunction(){
+		alert(outerVar)
+	}
+	return innerFunction
+}
+const myInnerFunction = outerFunction()
+myInnerFunction()
+
+
 /* <- === === === === === === ===  Задачи  === === === === === === === -> */
 // https://learn.javascript.ru/task/if-else-required
 
@@ -837,6 +851,8 @@ for(let i = 0; i < resUser * 2 - 1; i++){
 // 	return confirm('Ты достиг возраст +18')
 // }
 // checkAge(17)
+
+
 
 /* <- === === === === === === ===  Задачи  === === === === === === === -> */
 // https://learn.javascript.ru/task/rewrite-function-question-or
@@ -1230,19 +1246,49 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // console.log(user)
 // user.fn
 
-const telCoders = {
-	'49': 'Германия',
-	'41': 'Швейцария',
-	'44': 'Великобритания',
-	/* -------------------- */
-	'1': 'USA'
-}
-for(let key in telCoders){
-	console.log(key)
-}
+// const telCoders = {
+// 	'+49': 'Германия',
+// 	'+41': 'Швейцария',
+// 	'+44': 'Великобритания',
+// 	/* -------------------- */
+// 	'+1': 'USA'
+// }
+// for(let key in telCoders){
+// 	console.log(+key)
+// }
+
+// const user = {
+// 	// name: 'John',
+// 	// age: 20,
+// }
+// // user[name] = 'John'
+// // user['surname'] = 'Shmit'
+// // user[name] = 'Peter'
+// // delete user[name]
+
+// console.log(user[name])
+// console.log(user['surname'])
+
+// function isEmpty(obj) {
+// 	for (let key in obj) {
+// 			// если тело цикла начнет выполняться - значит в объекте есть свойства
+// 			return false;
+// 	}
+// 	return true;
+// }
+// console.log(isEmpty(user))
 
 
-
+// const salaries = {
+// 	John: 100,
+// 	Ann: 190,
+// 	Pete: 0
+// }
+// let sum = 0 
+// for(let key in salaries){
+// 	sum += salaries[key]
+// }
+// console.log(sum)
 // let login = prompt('Ведите имя пользователя'),
 // 				ageUser = Number(prompt('Введите возраст')),
 // 				ageRes,
