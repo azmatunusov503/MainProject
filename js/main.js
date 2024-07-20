@@ -832,15 +832,15 @@ for(let i = 0; i < resUser * 2 - 1; i++){
 
 /* <- === === === === === === ===  Замыкание  === === === === === === === -> */
 
-function outerFunction(){
-	const outerVar = 'Внешний переменный'
-	function innerFunction(){
-		alert(outerVar)
-	}
-	return innerFunction
-}
-const myInnerFunction = outerFunction()
-myInnerFunction()
+// function outerFunction(){
+// 	const outerVar = 'Внешний переменный'
+// 	function innerFunction(){
+// 		alert(outerVar)
+// 	}
+// 	return innerFunction
+// }
+// const myInnerFunction = outerFunction()
+// myInnerFunction()
 
 
 /* <- === === === === === === ===  Задачи  === === === === === === === -> */
@@ -1289,6 +1289,90 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // 	sum += salaries[key]
 // }
 // console.log(sum)
+
+
+// let users = {
+// 	name: 'John',
+// }
+// alert(`1 users ${users['name']}`)
+
+// let admin = users
+// admin['name'] = 'Azamat'
+
+
+// alert(`2 users ${users['name']}`)
+
+// delete admin['name']
+// alert(`3 admin ${admin['name']}`)
+
+// const users = {
+// 	name: 'John',
+// 	age: 20,
+// 	address: 'MayaMiBitch'
+// }
+// const clone = {}
+// for(let key in users){
+// 	clone[key] = users[key]
+// }
+// clone['address'] = 'USA'
+// alert(`1 address ${users['address']}`) 
+// alert(`2 address ${clone['address']}`) 
+
+// const clone = Object.assign({}, users)
+// users.age++
+// console.log(users['age'])
+
+// function marry(man, woman){
+// 	woman['husband'] = man
+// 	man['wife'] = woman
+// 	return {
+// 		father: man,
+// 		mother: woman
+// 	}
+// }
+// const family = marry({
+// 	name: 'John'
+// },{
+// 	name: 'Ann'
+// })
+// console.log()
+// for(let key in family){
+// 	console.log(family[key])
+// }
+
+
+// function makeUser() {
+// 	return {
+// 			name: "John",
+// 			ref(){
+// 				return this
+// 			}
+// 	};
+// }
+
+// let user = makeUser();
+
+// console.log( user.ref().name );
+// console.log(this)
+
+// function Person(name) {
+//  return	this.name = name
+// }
+// const person = new Person('Alex');
+// console.log(person.name); // Alex
+// const obj = {
+// 	name: 'Monica',
+// 	greet: function() {
+// 					const inner = () => {
+// 									console.log(`Привет, ${this.name}`);
+// 					};
+// 					inner('Alex');
+// 	}
+// };
+// obj.greet(); // Привет, Monica
+
+
+
 // let login = prompt('Ведите имя пользователя'),
 // 				ageUser = Number(prompt('Введите возраст')),
 // 				ageRes,
