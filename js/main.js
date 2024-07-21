@@ -747,9 +747,7 @@ for(let i = 0; i < resUser * 2 - 1; i++){
 -----*-----
 */
 
-
 /* <- === === === === === === === === === === === === === ===  Функции  === === === === === === === === === === === === === === -> */
-
 
 // function sum (a = 7, b = 7) {
 // 	let res = a + b
@@ -829,7 +827,6 @@ for(let i = 0; i < resUser * 2 - 1; i++){
 // 	() => alert('Вы отменили выполнение')
 // )
 
-
 /* <- === === === === === === ===  Замыкание  === === === === === === === -> */
 
 // function outerFunction(){
@@ -842,7 +839,6 @@ for(let i = 0; i < resUser * 2 - 1; i++){
 // const myInnerFunction = outerFunction()
 // myInnerFunction()
 
-
 /* <- === === === === === === ===  Задачи  === === === === === === === -> */
 // https://learn.javascript.ru/task/if-else-required
 
@@ -851,8 +847,6 @@ for(let i = 0; i < resUser * 2 - 1; i++){
 // 	return confirm('Ты достиг возраст +18')
 // }
 // checkAge(17)
-
-
 
 /* <- === === === === === === ===  Задачи  === === === === === === === -> */
 // https://learn.javascript.ru/task/rewrite-function-question-or
@@ -1278,18 +1272,16 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // }
 // console.log(isEmpty(user))
 
-
 // const salaries = {
 // 	John: 100,
 // 	Ann: 190,
 // 	Pete: 0
 // }
-// let sum = 0 
+// let sum = 0
 // for(let key in salaries){
 // 	sum += salaries[key]
 // }
 // console.log(sum)
-
 
 // let users = {
 // 	name: 'John',
@@ -1298,7 +1290,6 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 
 // let admin = users
 // admin['name'] = 'Azamat'
-
 
 // alert(`2 users ${users['name']}`)
 
@@ -1315,31 +1306,83 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // 	clone[key] = users[key]
 // }
 // clone['address'] = 'USA'
-// alert(`1 address ${users['address']}`) 
-// alert(`2 address ${clone['address']}`) 
+// alert(`1 address ${users['address']}`)
+// alert(`2 address ${clone['address']}`)
 
 // const clone = Object.assign({}, users)
 // users.age++
 // console.log(users['age'])
 
-// function marry(man, woman){
+// function marry(man, woman) {
 // 	woman['husband'] = man
 // 	man['wife'] = woman
 // 	return {
 // 		father: man,
-// 		mother: woman
+// 		mother: woman,
 // 	}
 // }
-// const family = marry({
-// 	name: 'John'
-// },{
-// 	name: 'Ann'
-// })
-// console.log()
-// for(let key in family){
+// const family = marry(
+// 	{
+// 		name: 'John',
+// 	},
+// 	{
+// 		name: 'Ann',
+// 	}
+// )
+
+// for (let key in family) {
 // 	console.log(family[key])
 // }
 
+
+/* 
+1. Есть руководитель у которого есть подчиненные
+2. Надо добавить ссылку к объекту руководителя всех подчиненных и наоборот
+3. 
+4. 
+*/
+
+// const Departments = headDepartments(
+// 	{
+// 	name: 'Azamat',
+// 	age: 21,
+// 	work: 'Head Departments'
+// },{
+// 	name: 'Azamat',
+// 	age: 21,
+// 	work: 'Head Departments'
+// },
+// )
+
+// function headDepartments(headDep, employees){
+// 	headDep['Employees'] = employees
+//  return {
+// 		HeadDep: headDep
+// 	}
+// }
+
+// for(let key in Departments){
+// 	console.log(Departments[key])
+// }
+// console.log(JSON.stringify(Departments, null, 1))
+
+// console.log(JSON)
+// function headDepartments(employees, headDep){
+// 	let i = 0;
+// 	i++
+// 	headDep[i] = employees
+// 	return {
+// 		headDep: headDep
+// 	}
+// }
+// const headDepartmentsPayme = headDepartments(
+// 	{
+// 		name: 'Azamat',
+// 		age: 25,
+// 		hobby: 'Bascetbool',
+// 		work: 'Head',
+// 	},
+// )
 
 // function makeUser() {
 // 	return {
@@ -1371,7 +1414,47 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // };
 // obj.greet(); // Привет, Monica
 
+// const calculator = {
+// 	sum(){
+// 		return this.a + this.b
+// 	},
+// 	mul(){
+// 		return this.a * this.b
+// 	},
+// 	read(){
+// 		this.a = +prompt('a?', 0)
+// 		this.b = +prompt('b?', 0)
+// 	},
+// }
+// calculator.read()
+// console.log(calculator.sum())
+// console.log(calculator.mul())
 
+// let ladder = {
+// 	step: 2,
+// 	up() {
+// 		this.step++
+// 		return this
+// 	},
+// 	down() {
+// 		this.step--
+// 		return this
+// 	},
+// 	showStep() {
+// 		console.log(this.step)
+// 		return this
+// 	},
+// }
+
+// ladder.up().up().down().showStep().down().showStep() // показывает 1 затем 0
+
+// ladder
+// 	.up()
+// 	.up()
+// 	.down()
+// 	.showStep() // 1
+// 	.down()
+// 	.showStep() // 0
 
 // let login = prompt('Ведите имя пользователя'),
 // 				ageUser = Number(prompt('Введите возраст')),
@@ -1447,7 +1530,6 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // for(let i in newObject){
 
 // }
-
 
 // let str = new String('lorem rem'),
 // 	str2 = ''
@@ -1766,9 +1848,7 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // d.push(3)
 // console.log(d)
 
-
 /* <- === === === === === === === === === === === === === ===  Авто тестирование  === === === === === === === === === === === === === === -> */
-
 
 // function pow(x, n){
 // 	let result = x
@@ -1800,7 +1880,6 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // 	}
 // })
 
-
 // function pow(x, n){
 // 	if(n < 0) return NaN
 // 	if(Math.round(n) != n) return NaN
@@ -1810,7 +1889,6 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // 	}
 // 	return result
 // }
-
 
 // describe("pow", function() {
 
@@ -1841,7 +1919,6 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // 	})
 // })
 
-
 // let powRes = 3
 // describe('Функция возведения в степень pow', function(){
 // 	before(() => {});
@@ -1857,22 +1934,17 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // 		makeTest(i, powRes)
 // 	}
 
-
-	
 // 		beforeEach(() => {});
 // 		afterEach(() => {});
-	
+
 // 		it('тест 1', () => alert(1));
 // 		it('тест 2', () => alert(2))
 // })
-
 
 /* Возведение в степень */
 // console.log(3 ** 4)
 
 // console.log(3 * 3 * 3 * 3)
-
-
 
 // describe("тест", function() {
 
@@ -1888,8 +1960,6 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // });
 
 /* <- === === === === === === === === === === === === === ===  Авто тестирование end  === === === === === === === === === === === === === === -> */
-
-
 
 /* <- === === === === === === === === === === === === === ===  Code Wars  === === === === === === === === === === === === === === -> */
 
@@ -1921,7 +1991,6 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // 							return days;
 // 			}
 
-
 // 			getYears() {
 // 							if (this.seconds < 31536000) {
 // 											return 0;
@@ -1939,7 +2008,6 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // 							const num = +el.split(' ')[0];
 // 							return el + (num > 1 ? 's' : '');
 // 			}
-			
 
 // 			getArrayData() {
 // 							let array = [
@@ -1953,9 +2021,6 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // 							return this.arrayData;
 // 			}
 // }
-
-
-
 
 // function formatDuration (seconds) {
 // 			if (!seconds) return 'now'
