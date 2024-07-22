@@ -1,20 +1,47 @@
-
 // Запрашиваем данные у пользователя
-const numLevels = parseInt(prompt("Введите количество уровней объекта:")),
-					data = []
+// const numLevels = parseInt(prompt("Введите количество уровней объекта:")),
+// 					data = []
 
 // Создаем многомерный объект
-for (let i = 0; i < numLevels; i++) {
-  const level = {},
-								numKeys = parseInt(prompt(`Введите количество ключей для уровня ${i + 1}:`))
+// for (let i = 0; i < numLevels; i++) {
+//   const level = {},
+// 								numKeys = parseInt(prompt(`Введите количество ключей для уровня ${i + 1}:`))
 
-  for (let j = 0; j < numKeys; j++) {
-    const key = prompt(`Введите ключ ${j + 1} для уровня ${i + 1}:`),
-										value = prompt(`Введите значение для ключа ${key}:`)
-    level[key] = value
-  }
+//   for (let j = 0; j < numKeys; j++) {
+//     const key = prompt(`Введите ключ ${j + 1} для уровня ${i + 1}:`),
+// 										value = prompt(`Введите значение для ключа ${key}:`)
+//     level[key] = value
+//   }
 
-  data.push(level)
+//   data.push(level)
+// }
+
+// console.log(data)
+
+const head = {
+	name: 'Head',
+	children: [],
 }
 
-console.log(data)
+function addChildren(parent, childrenNames) {
+	childrenNames.forEach(name => {
+		const child = {
+			name: name,
+			parent: parent,
+		}
+		parent.children.push(child)
+	})
+}
+
+const childNames = [
+	'Children 1',
+	'Children 2',
+	'Children 3',
+	'Children 4',
+	'Children 5',
+]
+
+addChildren(head, childNames)
+
+console.log(head)
+// console.log(JSON.stringify(head, null, 1))
