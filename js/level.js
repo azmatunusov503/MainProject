@@ -43,5 +43,5 @@ const childNames = [
 
 addChildren(head, childNames)
 
-console.log(head)
+// console.log(head)
 // console.log(JSON.stringify(head, null, 1))
