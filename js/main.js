@@ -1333,58 +1333,52 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // for (let key in family) {
 // 	console.log(family[key])
 // }
+// console.log(`------------------------------------------------------------------------------------------------`)
+/* <- === === === === === === === === === === === === === ===  Задачи  === === === === === === === === === === === === === === -> */
+/* Создайте объект car с свойствами make, model, и year. Напишите функцию, которая выводит информацию о машине в формате: "Машина: [марка] [модель], [год]". */
 
-
-/* 
-1. Есть руководитель у которого есть подчиненные
-2. Надо добавить ссылку к объекту руководителя всех подчиненных и наоборот
-3. 
-4. 
-*/
-
-// const Departments = headDepartments(
-// 	{
-// 	name: 'Azamat',
-// 	age: 21,
-// 	work: 'Head Departments'
-// },{
-// 	name: 'Azamat',
-// 	age: 21,
-// 	work: 'Head Departments'
-// },
-// )
-
-// function headDepartments(headDep, employees){
-// 	headDep['Employees'] = employees
-//  return {
-// 		HeadDep: headDep
-// 	}
+// const car = {
+// 	make: 'Audi',
+// 	model: 'Q8',
+// 	year: 2018,
 // }
-
-// for(let key in Departments){
-// 	console.log(Departments[key])
+// function carOutputs(car) {
+// 	console.log(`Машина: ${car['make']}: ${car['model']}: ${car['year']}.г выпуска`)
 // }
-// console.log(JSON.stringify(Departments, null, 1))
+// carOutputs(car)
 
-// console.log(JSON)
-// function headDepartments(employees, headDep){
-// 	let i = 0;
-// 	i++
-// 	headDep[i] = employees
-// 	return {
-// 		headDep: headDep
-// 	}
-// }
-// const headDepartmentsPayme = headDepartments(
-// 	{
-// 		name: 'Azamat',
-// 		age: 25,
-// 		hobby: 'Bascetbool',
-// 		work: 'Head',
-// 	},
-// )
+/* <- === === === === === === === === === === === === === ===  Задачи  === === === === === === === === === === === === === === -> */
+/* Напишите функцию cloneObject(obj), которая принимает объект и возвращает его глубокую копию. */
 
-/* <- === === === === === === ===  Задачи === === === === === === === -> */
+
+
+
+
+const car = {
+	make: 'Audi2',
+	model: 'Q8',
+	year: 2018,
+}
+
+const cars = new Array(car)
+function cloneObject(obj){
+	if(obj === null || typeof obj !== 'object'){
+		return obj
+	}
+	const copy = Array.isArray(obj) ? [] : {}
+
+	for(const key in obj){
+		if(obj.hasOwnProperty(key)){
+			copy[key] = cloneObject(obj[key])
+		}
+	}
+	return copy
+}
+console.log(car.make)
+const cloned = cloneObject(cars);
+console.log(`1`, cloned);
+
+/* <- === === === === === === === === === === === === === ===  Задачи  === === === === === === === === === === === === === === -> */
 // function makeUser() {
 // 	return {
 // 			name: "John",
@@ -1561,6 +1555,45 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // for(let key in pannier){
 // 	console.log(pannier[key].info)
 // }
+
+/* <- === === === === === === ===  Задачи === === === === === === === -> */
+// https://learn.javascript.ru/task/calculator-constructor
+
+/* function Calculator(){
+	this.read = function(){
+		this.a = Number(prompt(`a? ${0}`))
+		this.b = Number(prompt(`b? ${0}`))
+	}
+	this.sum = function(){
+		return this.a + this.b
+	}
+	this.mul = function(){
+		return this.a * this.b
+	}
+}
+let calculator = new Calculator()
+
+calculator.read()
+function userResult(){
+	console.log( `Sum = ${calculator.sum()}`);
+	console.log( `Mul = ${calculator.mul()}`);
+}
+
+userResult() */
+/* <- === === === === === === ===  Задачи === === === === === === === -> */
+// https://learn.javascript.ru/task/accumulator
+
+/* function Accumulator(startingValue){
+	this.value = startingValue
+	this.read = function(){
+		this.value += Number(prompt(`Сколько нужно добавить ? ${0}`))
+	}
+}
+
+let accumulator = new Accumulator(1)
+accumulator.read()
+accumulator.read()
+console.log(accumulator.value) */
 
 /* <- === === === === === === === === === === === === === ===  Объекты end  === === === === === === === === === === === === === === -> */
 
