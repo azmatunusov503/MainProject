@@ -1352,31 +1352,50 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 
 
 
+/* --! */
+
+// const car = {
+// 	make: 'Audi2',
+// 	model: 'Q8',
+// 	year: 2018,
+// }
+
+// const cars = new Array(car)
+// function cloneObject(obj){
+// 	if(obj === null || typeof obj !== 'object'){
+// 		return obj
+// 	}
+// 	const copy = Array.isArray(obj) ? [] : {}
+
+// 	for(const key in obj){
+// 		if(obj.hasOwnProperty(key)){
+// 			copy[key] = cloneObject(obj[key])
+// 		}
+// 	}
+// 	return copy
+// }
+// console.log(car.make)
+// const cloned = cloneObject(cars);
+// console.log(`1`, cloned);
 
 
-const car = {
-	make: 'Audi2',
-	model: 'Q8',
-	year: 2018,
+
+const sort = (arr) => {
+	if (arr.length <= 1) {
+					return arr;
+	}
+	const supportingEl = arr.pop();
+
+	return [
+					...sort(arr.filter(el => el <= supportingEl)),
+					supportingEl,
+					...sort(arr.filter(el => el > supportingEl))
+	]
+
 }
 
-const cars = new Array(car)
-function cloneObject(obj){
-	if(obj === null || typeof obj !== 'object'){
-		return obj
-	}
-	const copy = Array.isArray(obj) ? [] : {}
 
-	for(const key in obj){
-		if(obj.hasOwnProperty(key)){
-			copy[key] = cloneObject(obj[key])
-		}
-	}
-	return copy
-}
-console.log(car.make)
-const cloned = cloneObject(cars);
-console.log(`1`, cloned);
+console.log(sort([4, 5, 2, 3, 1, 6, 8, 5, 0, 7]))
 
 /* <- === === === === === === === === === === === === === ===  Задачи  === === === === === === === === === === === === === === -> */
 // function makeUser() {

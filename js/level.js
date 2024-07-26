@@ -86,3 +86,28 @@ addChildren(head, childNames)
 // console.log(head)
 // console.log(JSON.stringify(head, null, 1))
 
+/* // Отслеживание клавиатуры
+document.addEventListener('keydown', function(event) {
+	console.log(`Клавиша ${event.key} нажата. Код: ${event.code}`);
+});
+
+document.addEventListener('keyup', function(event) {
+	console.log(`Клавиша ${event.key} отпущена. Код: ${event.code}`);
+});
+
+// Отслеживание мыши
+document.addEventListener('click', function(event) {
+	console.log(`Клик по координатам: (${event.clientX}, ${event.clientY})`);
+});
+
+document.addEventListener('mousemove', function(event) {
+	console.log(`Мышь перемещена на координаты: (X: ${event.clientX}, Y: ${event.clientY})`);
+});
+
+document.addEventListener('mousedown', function(event) {
+	console.log(`Кнопка мыши ${event.button} нажата`);
+});
+
+document.addEventListener('mouseup', function(event) {
+	console.log(`Кнопка мыши ${event.button} отпущена`);
+}); */
