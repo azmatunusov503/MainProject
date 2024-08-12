@@ -1383,25 +1383,24 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // console.log(`1`, cloned);
 
 
-/* <- === === === === === === === === === === === === === ===  Задачи  === === === === === === === === === === === === === === -> */
+
+const sort = (arr) => {
+	if (arr.length <= 1) {
+					return arr;
+	}
+	const supportingEl = arr.pop();
+
+	return [
+					...sort(arr.filter(el => el <= supportingEl)),
+					supportingEl,
+					...sort(arr.filter(el => el > supportingEl))
+	]
+
+}
 
 
-// const sort = (arr) => {
-// 	if (arr.length <= 1) {
-// 					return arr;
-// 	}
-// 	const supportingEl = arr.pop();
+console.log(sort([4, 5, 2, 3, 1, 6, 8, 5, 0, 7]))
 
-// 	return [
-// 					...sort(arr.filter(el => el <= supportingEl)),
-// 					supportingEl,
-// 					...sort(arr.filter(el => el > supportingEl))
-// 	]
-
-// }
-
-
-// console.log(sort([4, 5, 2, 3, 1, 6, 8, 5, 0, 7]))
 /* <- === === === === === === === === === === === === === ===  Задачи  === === === === === === === === === === === === === === -> */
 // function makeUser() {
 // 	return {
