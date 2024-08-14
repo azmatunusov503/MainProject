@@ -1384,22 +1384,6 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 
 
 
-const sort = (arr) => {
-	if (arr.length <= 1) {
-					return arr;
-	}
-	const supportingEl = arr.pop();
-
-	return [
-					...sort(arr.filter(el => el <= supportingEl)),
-					supportingEl,
-					...sort(arr.filter(el => el > supportingEl))
-	]
-
-}
-
-
-console.log(sort([4, 5, 2, 3, 1, 6, 8, 5, 0, 7]))
 
 /* <- === === === === === === === === === === === === === ===  Задачи  === === === === === === === === === === === === === === -> */
 // function makeUser() {
