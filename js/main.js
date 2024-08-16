@@ -53,6 +53,10 @@
 // 13 / 9 = 1
 // 9 * 1 = 9
 // 13 - 9 = 4
+/* 
+
+*/
+
 /* <- === === === === === === === === === === === === === ===  Математические операции end  === === === === === === === === === === === === === === -> */
 
 // Операторы сравнение (Операторы булевой логики 'true' 'false')
@@ -1380,22 +1384,25 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // console.log(`1`, cloned);
 // <- === === === === ===  Задача end  === === === === === ->
 
-// <- === === === === === === ===  Задача === === === === === === === ->
+
+
 // const sort = (arr) => {
 // 	if (arr.length <= 1) {
 // 					return arr;
 // 	}
 // 	const supportingEl = arr.pop();
 
+// 	// console.log(arr.filter(el => el <= supportingEl))
 // 	return [
 // 					...sort(arr.filter(el => el <= supportingEl)),
 // 					supportingEl,
 // 					...sort(arr.filter(el => el > supportingEl))
 // 	]
-
+ 
 // }
 
-// console.log(sort([1, 0, 2, 4, 4, 5, 5, 6, 6, , 7, ]))
+
+// console.log(sort([1, 0]))
 
 // <- === === === === ===  Задача end  === === === === === ->
 

@@ -113,6 +113,7 @@ document.addEventListener('mouseup', function(event) {
 }); */
 
 
+<<<<<<< HEAD
 /* Sudoku */
 // function sudoku(puzzle){
 
@@ -130,3 +131,19 @@ document.addEventListener('mouseup', function(event) {
 // <- === === === === ===  Задача end  === === === === === ->
 
 
+=======
+// const array = [1, 2, 3, 4, 5, 6]
+// console.log(array.reduce((accumulator, initialValue) => {
+
+// }))
+
+
+console.log([0, 1, 2, 3, 4].reduce(function (previousValue, currentValue, index, array) {
+	return previousValue + currentValue;
+}))
+
+function calcAB(a, b){
+	return a + b
+}
+console.log(calcAB(1, 3, 23, 23))
+>>>>>>> 3d9e56d9944109d35f3133b1ca15985e28e40841
