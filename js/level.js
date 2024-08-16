@@ -58,30 +58,30 @@
 
 // console.log(data)
 
-const head = {
-	name: 'Head',
-	children: [],
-}
+// const head = {
+// 	name: 'Head',
+// 	children: [],
+// }
 
-function addChildren(parent, childrenNames) {
-	childrenNames.forEach(name => {
-		const child = {
-			name: name,
-			parent: parent,
-		}
-		parent.children.push(child)
-	})
-}
+// function addChildren(parent, childrenNames) {
+// 	childrenNames.forEach(name => {
+// 		const child = {
+// 			name: name,
+// 			parent: parent,
+// 		}
+// 		parent.children.push(child)
+// 	})
+// }
 
-const childNames = [
-	'Children 1',
-	'Children 2',
-	'Children 3',
-	'Children 4',
-	'Children 5',
-]
+// const childNames = [
+// 	'Children 1',
+// 	'Children 2',
+// 	'Children 3',
+// 	'Children 4',
+// 	'Children 5',
+// ]
 
-addChildren(head, childNames)
+// addChildren(head, childNames)
 
 // console.log(head)
 // console.log(JSON.stringify(head, null, 1))
@@ -111,3 +111,22 @@ document.addEventListener('mousedown', function(event) {
 document.addEventListener('mouseup', function(event) {
 	console.log(`Кнопка мыши ${event.button} отпущена`);
 }); */
+
+
+/* Sudoku */
+// function sudoku(puzzle){
+
+// }
+
+
+
+/* <- === === === === === === === === === === === === === === === === === === === ===  Тема  === === === === === === === === === === === === === === === === === === === === -> */
+/* <- === === === === === === === === === === === === === ===  Тема end  === === === === === === === === === === === === === === -> */
+
+// === === === === === === === === === === === === === ===  Под тема  === === === === === === === === === === === === === ===  
+// === === === === === === === === === === ===  Под тема end === === === === === === === === === === ===  
+
+// <- === === === === === === ===  Задача === === === === === === === ->
+// <- === === === === ===  Задача end  === === === === === ->
+
+
