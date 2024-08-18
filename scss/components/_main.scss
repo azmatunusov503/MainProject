@@ -7,6 +7,23 @@
 	filter: drop-shadow(0 0 10px white);
 	position: absolute;
 }
+.header{
+	width: 100%;
+	display: flex;
+	margin: 10px auto;
+	flex-wrap: wrap;
+	z-index: 2;
+	position: relative;
+}
+.button1,
+.button2{
+	width: 100px;
+	height: 60px;
+	position: absolute;
+	border: 3px solid white;
+	border-radius: 6px;
+	z-index: 1;
+}
 @function random_range($min, $max) {
 	$rand: random();
 	$random_range: $min + floor($rand * (($max - $min) + 1));
