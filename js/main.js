@@ -961,7 +961,7 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // // Выводим куб в консоль
 // console.log(cube);
 
-/* <- === === === === === === ===  Задачи === === === === === === === -> */
+// <- === === === === === === ===  Задача === === === === === === === ->
 
 // const pyramidHeight = 5;
 
@@ -991,7 +991,7 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // Выводим пирамиду в консоль
 // console.log(pyramid);
 
-/* <- === === === === === === ===  Задачи === === === === === === === -> */
+// <- === === === === === === ===  Задача === === === === === === === ->
 
 // let a = prompt(`Введите 1 слово`)
 // let b = prompt(`Введите 2 слово`)
@@ -1229,7 +1229,7 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // 	console.log(`Код правильно выполнился`)
 // }
 
-/* <- === === === === === === === === === === === === === ===  Объекты  === === === === === === === === === === === === === === -> */
+/* <- === === === === === === === === === === === === === === === === === === === ===  Объекты  === === === === === === === === === === === === === === === === === === === === -> */
 
 // const user = {
 // 	name: 'John',
@@ -1338,7 +1338,8 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // 	console.log(family[key])
 // }
 // console.log(`------------------------------------------------------------------------------------------------`)
-/* <- === === === === === === === === === === === === === ===  Задачи  === === === === === === === === === === === === === === -> */
+
+// <- === === === === === === ===  Задача === === === === === === === ->
 /* Создайте объект car с свойствами make, model, и year. Напишите функцию, которая выводит информацию о машине в формате: "Машина: [марка] [модель], [год]". */
 
 // const car = {
@@ -1350,11 +1351,11 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // 	console.log(`Машина: ${car['make']}: ${car['model']}: ${car['year']}.г выпуска`)
 // }
 // carOutputs(car)
+// <- === === === === ===  Задача end  === === === === === ->
 
-/* <- === === === === === === === === === === === === === ===  Задачи  === === === === === === === === === === === === === === -> */
+// <- === === === === === === ===  Задача === === === === === === === ->
+
 /* Напишите функцию cloneObject(obj), которая принимает объект и возвращает его глубокую копию. */
-
-
 
 /* --! */
 
@@ -1381,40 +1382,93 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // console.log(car.make)
 // const cloned = cloneObject(cars);
 // console.log(`1`, cloned);
+// <- === === === === ===  Задача end  === === === === === ->
 
 
 
-
-/* <- === === === === === === === === === === === === === ===  Задачи  === === === === === === === === === === === === === === -> */
-// function makeUser() {
-// 	return {
-// 			name: "John",
-// 			ref(){
-// 				return this
-// 			}
-// 	};
-// }
-
-// let user = makeUser();
-
-// console.log( user.ref().name );
-// console.log(this)
-
-// function Person(name) {
-//  return	this.name = name
-// }
-// const person = new Person('Alex');
-// console.log(person.name); // Alex
-// const obj = {
-// 	name: 'Monica',
-// 	greet: function() {
-// 					const inner = () => {
-// 									console.log(`Привет, ${this.name}`);
-// 					};
-// 					inner('Alex');
+// const sort = (arr) => {
+// 	if (arr.length <= 1) {
+// 					return arr;
 // 	}
-// };
-// obj.greet(); // Привет, Monica
+// 	const supportingEl = arr.pop();
+
+// 	// console.log(arr.filter(el => el <= supportingEl))
+// 	return [
+// 					...sort(arr.filter(el => el <= supportingEl)),
+// 					supportingEl,
+// 					...sort(arr.filter(el => el > supportingEl))
+// 	]
+ 
+// }
+
+
+// console.log(sort([1, 0]))
+
+// <- === === === === ===  Задача end  === === === === === ->
+
+/* <- === === === === === === === === === === === === === === === === === === === ===  Методы объекта, "this"  === === === === === === === === === === === === === === === === === === === === -> */
+// const user = {
+// 	name: 'Alexandr',
+// 	age: 23,
+// 	logThis(){
+// 		console.log(`Название функции: ${this.name} -`, this.name, this)
+// 		return this.name
+// 	},
+// 	/* address: {
+// 		city: 'Tashkent',
+// 		street: 'Mur',
+// 		logInnerThis(){
+// 			console.log(`This в теле метода объекта address: ${this}`, this)
+// 			return this
+// 		},
+// 	}, */
+// }
+// user.logThis()
+/* user.address.logInnerThis() */
+
+// const user1 = {name: 'Misha'},
+// 						user2 = {name: 'Vasya'}
+
+// function logInfo(){
+// 	console.log('This:', this)
+// 	console.log('this.name:', this.name)
+// }
+// logInfo()
+// user1.logName = logInfo
+// user2.logName = logInfo
+
+// user1.logName()
+// user2.logName()
+
+// function showThis(){
+// 	console.log(this)
+// }
+// showThis()
+
+// const person = {
+// 	name: 'Azam',
+// 	greet(){
+// 		console.log(this.nam)
+// 	}
+// }
+// person.greet()
+
+function Car(make, model){
+	this.make = make
+	this.model = model
+	this.getInfo = function(){ 
+		return {make: this.make, model: this.model}
+	}
+}
+const car = new Car('Audi', 'R90')
+
+const myCar = {
+	make: 'Audi',
+	model: 'R90',
+}
+// myCar.getInfo = car
+console.log(car.getInfo())
+// <- === === === === === === ===  Задача === === === === === === === ->
 
 // const calculator = {
 // 	sum(){
@@ -1432,6 +1486,8 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // console.log(calculator.sum())
 // console.log(calculator.mul())
 
+// <- === === === === === === ===  Задача === === === === === === === ->
+
 // let ladder = {
 // 	step: 2,
 // 	up() {
@@ -1443,13 +1499,11 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // 		return this
 // 	},
 // 	showStep() {
-// 		console.log(this.step)
+// 		console.log(`Текущая ступенька: ${this.step}:`, this.step)
 // 		return this
 // 	},
 // }
-
 // ladder.up().up().down().showStep().down().showStep() // показывает 1 затем 0
-
 // ladder
 // 	.up()
 // 	.up()
@@ -1457,6 +1511,8 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // 	.showStep() // 1
 // 	.down()
 // 	.showStep() // 0
+// <- === === === === ===  Задача end  === === === === === ->
+/* <- === === === === === === === === === === === === === ===  Методы объекта, "this" end  === === === === === === === === === === === === === === -> */
 
 // let login = prompt('Ведите имя пользователя'),
 // 				ageUser = Number(prompt('Введите возраст')),
@@ -1563,31 +1619,33 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // 	console.log(pannier[key].info)
 // }
 
-/* <- === === === === === === ===  Задачи === === === === === === === -> */
+// <- === === === === === === ===  Задача === === === === === === === ->
 // https://learn.javascript.ru/task/calculator-constructor
 
-/* function Calculator(){
-	this.read = function(){
-		this.a = Number(prompt(`a? ${0}`))
-		this.b = Number(prompt(`b? ${0}`))
-	}
-	this.sum = function(){
-		return this.a + this.b
-	}
-	this.mul = function(){
-		return this.a * this.b
-	}
-}
-let calculator = new Calculator()
+// function Calculator(){
+// 	this.read = function(){
+// 		this.a = Number(prompt(`a? ${0}`))
+// 		this.b = Number(prompt(`b? ${0}`))
+// 	}
+// 	this.sum = function(){
+// 		return this.a + this.b
+// 	}
+// 	this.mul = function(){
+// 		return this.a * this.b
+// 	}
+// }
+// let calculator = new Calculator()
 
-calculator.read()
-function userResult(){
-	console.log( `Sum = ${calculator.sum()}`);
-	console.log( `Mul = ${calculator.mul()}`);
-}
+// calculator.read()
+// function userResult(){
+// 	console.log( `Sum = ${calculator.sum()}`);
+// 	console.log( `Mul = ${calculator.mul()}`);
+// }
 
-userResult() */
-/* <- === === === === === === ===  Задачи === === === === === === === -> */
+// userResult()
+// <- === === === === ===  Задача end  === === === === === ->
+
+// <- === === === === === === ===  Задача === === === === === === === ->
 // https://learn.javascript.ru/task/accumulator
 
 /* function Accumulator(startingValue){
@@ -1601,20 +1659,36 @@ let accumulator = new Accumulator(1)
 accumulator.read()
 accumulator.read()
 console.log(accumulator.value) */
+// <- === === === === ===  Задача end  === === === === === ->
 
 /* <- === === === === === === === === === === === === === ===  Объекты end  === === === === === === === === === === === === === === -> */
-
-
 
 /* <- === === === === === === === === === === === === === ===  Опциональная цепочка '?.'  === === === === === === === === === === === === === === -> */
 
 // let user = {}
 // console.log(user?.address)
 
-
 /* <- === === === === === === === === === === === === === ===  Опциональная цепочка '?.'  === === === === === === === === === === === === === === -> */
 
-/* <- === === === === === === === === === === === === === ===  Массивы  === === === === === === === === === === === === === === -> */
+/* <- === === === === === === === === === === === === === === === === === === === ===  Массивы  === === === === === === === === === === === === === === === === === === === === -> */
+
+/* <- === === === === === === ===  Урок с YouTube === === === === === === === -> */
+
+// const array = [1, 2,3, true, 123]
+// array[100] = 'lorem'
+// array[101] = '100'
+
+// console.log(array.length)
+// for(let key in array){
+// 	console.log(`let array = [${key}: ${array[key]}]`)
+// }
+// console.log(array)
+// console.log(array.length)
+// console.log(`_________(${array.length} - 1 = ${array[array.length - 1]})_________`)
+
+/* <- === === === === === === ===  Урок с YouTube end === === === === === === === -> */
+
+// <- === === === === === === ===  Задача === === === === === === === ->
 
 // const arr = [1, 2, 3, 4, 5, 6, 7]
 
@@ -1701,10 +1775,63 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 
 // console.log(`hello Azamat`)
 
+/* <- === === === === === === ===  Array.reduce() === === === === === === === -> */
+
+/* При первом вызове функции, параметры accumulator и currentValue могут принимать одно из двух значений. Если при вызове reduce() передан аргумент initialValue, то значение accumulator будет равным значению initialValue, а значение currentValue будет равным первому значению в массиве. Если аргумент initialValue не задан, то значение accumulator будет равным первому значению в массиве, а значение currentValue будет равным второму значению в массиве. Реализуй */
+
+// function customReduce(array, callback, initialValue) {
+// 	let accumulator;
+// 	let currentValue;
+// 	let startIndex;
+
+// 	// Проверяем, задан ли initialValue
+// 	if (initialValue !== undefined) {
+// 					accumulator = initialValue;
+// 					currentValue = array[0];
+// 					startIndex = 0;
+// 	} else {
+// 					accumulator = array[0];
+// 					currentValue = array[1];
+// 					startIndex = 1;
+// 	}
+
+// 	// Проходим по массиву, начиная с нужного индекса
+// 	for (let i = startIndex; i < array.length; i++) {
+// 					accumulator = callback(accumulator, currentValue, i, array);
+// 					currentValue = array[i + 1];
+// 	}
+
+// 	return accumulator;
+// }
+
+// // Пример использования
+// const numbers = [1, 2, 3, 4,];
+// const sum = customReduce(numbers, (acc, curr) => acc + curr, 0);
+// console.log(sum); // 10
+
+// let array = [0, 1, 2, 3, 4, 5]
+// console.log(array.reduce(function (accumulator, currentValue, index, array) {
+// 	return accumulator + currentValue;
+// }, 10))
+
+/* --! */
+
+// let initialValue = 0;
+// let array = [{ x: 1 }, { x: 2 }, { x: 3 }]
+// function sum(array){
+// 	for(let i = 0; i < array.length; i++){
+// 		return  sum = array.reduce((accumulator, currentValue) => currentValue.x, initialValue);
+// 	}
+
+// }
+// // let sum = array.reduce((accumulator, currentValue) => {for(let i = 0; i < array.length; i++) currentValue.x}, initialValue);
+// // sum == 6
+// console.log(sum(array))
+
 /* <- === === === === === === === === === === === === === ===  Массивы end  === === === === === === === === === === === === === === -> */
 
 /* <- === === === === === === === === === === === === === ===  Не понятно что это пока  === === === === === === === === === === === === === === -> */
-/* <- === === === === === === ===  Задачи === === === === === === === -> */
+// <- === === === === === === ===  Задача === === === === === === === ->
 
 // class Llist {
 // 	constructor() {
@@ -2083,3 +2210,78 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // 			return dataArray.slice(0, dataArray.length - 1).join(', ') + lastEl;
 // 	}
 // console.log(formatDuration(36000))
+/* <- === === === === === === === === === === === === === ===  switch  === === === === === === === === === === === === === === -> */
+
+// let a = 5 + 3
+// switch(a){
+// 	case 4:
+// 		console.log('Не тот')
+// 		break
+// 	case 3:
+// 		console.log('Не тот')
+// 		break
+// 	case 8:
+// 		console.log('Тот')
+// 		break
+// 	case 4:
+// 		console.log('Тот 2')
+// 		break
+// 		case 3:
+// 		console.log('Тот3')
+// 	}
+
+// <- === === === === === === ===  Задача === === === === === === === ->
+
+// switch (browser) {
+// 	case 'Edge':
+// 			alert( "You've got the Edge!" );
+// 			break;
+
+// 	case 'Chrome':
+// 	case 'Firefox':
+// 	case 'Safari':
+// 	case 'Opera':
+// 			alert( 'Okay we support these browsers too' );
+// 			break;
+
+// 	default:
+// 			alert( 'We hope that this page looks ok!' );
+// }
+
+// if(browser === 'Edge'){
+// 	console.log("You've got the Edge!")
+// }else if(browser === 'chrome' || browser === 'firefox' || browser === 'Safari' || browser === 'Opera'){
+// 	console.log('Okay we support these browsers too')
+// }else{
+// 	console.log('We hope that this page looks ok!')
+// }
+// <- === === === === === === ===  Задача === === === === === === === ->
+
+// const number = +prompt('Введите число между 0 и 3', '');
+
+// if (number === 0) {
+//   alert('Вы ввели число 0');
+// }
+
+// if (number === 1) {
+//   alert('Вы ввели число 1');
+// }
+
+// if (number === 2 || number === 3) {
+//   alert('Вы ввели число 2, а может и 3');
+// }
+
+// switch(number){
+// 	case 0:
+// 		console.log('Вы ввели число 0')
+// 		break
+// 	case 1:
+// 		console.log('Вы ввели число 1')
+// 		break
+// 	case 2:
+// 	case 3:
+// 		console.log('Вы ввели число 2, а может и 3')
+// 	break
+// 	default:
+// 		console.log('Результат выглядит странновато. Честно.')
+// }
