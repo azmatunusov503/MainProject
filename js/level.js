@@ -112,21 +112,60 @@ document.addEventListener('mouseup', function(event) {
 	console.log(`Кнопка мыши ${event.button} отпущена`);
 }); */
 
-
 /* Sudoku */
 // function sudoku(puzzle){
 
 // }
 
 
+// <- === === === === === === ===  Задача === === === === === === === ->
+/* function startStopClearBtn(){
+	const startBtn = document.getElementById('controlButton'),
+	resultBtn = document.getElementById('resultButton')
+	
+	
+	let isRunning = false
+	let results = []
+	
+	startBtn.addEventListener('click', () => {
+		if (isRunning) {
+			// Остановка функции
+			isRunning = false
+			startBtn.textContent = 'Clear'
+			resultBtn.disabled = true // Отключаем кнопку Result
+			console.log('Функция остановлена')
+		} else {
+			if (startBtn.textContent === 'Clear') {
+				// Очистка результатов
+				results = []
+				console.log('Результаты очищены')
+				startBtn.textContent = 'Start' // Возвращаем текст кнопки на Start
+			} else {
+				// Запуск функции
+			isRunning = true
+			startBtn.textContent = 'Stop'
+			resultBtn.disabled = false // Включаем кнопку Result
+			console.log('Функция запущена')
+			// Здесь можно добавить код для выполнения задачи
+		}
+	}
+})
+
+resultBtn.addEventListener('click', () => {
+	if (isRunning) {
+		// Записываем результат только если функция запущена
+		results.push('Результат: ' + new Date().toLocaleTimeString())
+		console.log(results)
+	}
+})
+} */
+// <- === === === === ===  Задача end  === === === === === ->
 
 /* <- === === === === === === === === === === === === === === === === === === === ===  Тема  === === === === === === === === === === === === === === === === === === === === -> */
 /* <- === === === === === === === === === === === === === ===  Тема end  === === === === === === === === === === === === === === -> */
 
-// === === === === === === === === === === === === === ===  Под тема  === === === === === === === === === === === === === ===  
-// === === === === === === === === === === ===  Под тема end === === === === === === === === === === ===  
+// === === === === === === === === === === === === === ===  Под тема  === === === === === === === === === === === === === ===
+// === === === === === === === === === === ===  Под тема end === === === === === === === === === === ===
 
 // <- === === === === === === ===  Задача === === === === === === === ->
 // <- === === === === ===  Задача end  === === === === === ->
-
-

@@ -1701,6 +1701,63 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 
 // console.log(`hello Azamat`)
 
+// const array = [1, 2, 3, 4, function(){return console.log('hello')}]
+// let lastArray = array.pop()
+// console.log(lastArray)
+// console.log(array)
+// let lastArrayPush = array.push('Azamat')
+// console.log(array)
+// array[124] = 'Азамате'
+// console.log(array)
+// console.log(array.length)
+
+
+
+// const styles = ['Джаз', 'Блюз',]
+
+// console.log(styles)
+
+// styles.push('Рок-н-ролл')
+
+// console.log(styles)
+
+// styles[Math.floor((styles.length - 1) / 2)] = "Классика";
+
+// console.log(styles)
+
+// styles.shift()
+
+// console.log(styles)
+
+// styles.unshift('Рэп', 'Регги')
+
+// console.log(styles)
+
+// const array = ['a', 'b']
+// array.push(function(){
+// 	console.log(this)
+// })
+// array[2]()
+
+// console.log(array)
+
+// function getMaxSubSum(array){
+// 	let maxSum = 0,
+// 					partialSum = 0
+// 	for(let item of array){
+// 		partialSum += item
+// 		maxSum = Math.max(maxSum, partialSum)
+// 		if(partialSum < 0) partialSum = 0
+// 	}
+// 	return maxSum
+// }
+
+// console.log(getMaxSubSum([-1, 2, 3, -9]) == 5)
+// console.log(getMaxSubSum([2, -1, 2, 3, -9]) == 6)
+// console.log(getMaxSubSum([-1, 2, 3, -9, 11]) == 11)
+// console.log(getMaxSubSum([-2, -1, 1, 2]) == 3)
+// console.log(getMaxSubSum([100, -9, 2, -3, 5]) == 100)
+// console.log(getMaxSubSum([1, 2, 3]) == 6)
 /* <- === === === === === === === === === === === === === ===  Массивы end  === === === === === === === === === === === === === === -> */
 
 /* <- === === === === === === === === === === === === === ===  Не понятно что это пока  === === === === === === === === === === === === === === -> */
@@ -2083,3 +2140,31 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // 			return dataArray.slice(0, dataArray.length - 1).join(', ') + lastEl;
 // 	}
 // console.log(formatDuration(36000))
+/* <- === === === === === === === === === === === === === === === === === === === ===  Тип данных числа  === === === === === === === === === === === === === === === === === === === === -> */
+// let num = '100$',
+// 				num2 = 'ffffff'
+// console.log(parseInt(num))
+// console.log(parseFloat(num2 , 16))
+
+// let num1 = Number(prompt('Введите число 1', '')),
+// 				num2 = Number(prompt('Введите число 2', ''))
+// function calcSum(a, b){
+// 	if(Number.isNaN(a) || Number.isNaN(b)){
+// 		return console.log('Ввели не число функция не смог сложить')
+// 	}else{
+// 		return console.log(`${a} + ${b} = ${a + b}`)
+// 	}
+// }
+// calcSum(num1, num2)
+// let num = Number(parseInt(prompt('Введите число')))
+// console.log(num)
+// console.log(Number.isNaN())
+
+
+// function random(min, max){
+// 	return Math.round(min + Math.random() * (max - min))
+// }
+// console.log(random(1, 5))
+
+
+/* <- === === === === === === === === === === === === === ===  Тип данных числа end  === === === === === === === === === === === === === === -> */

@@ -11,19 +11,25 @@
 .header{
 	width: 100%;
 	display: flex;
-	margin: 10px auto;
+	align-items: center;
 	flex-wrap: wrap;
 	z-index: 2;
-	position: relative;
-}
-.button1,
-.button2{
-	width: 100px;
-	height: 60px;
-	position: absolute;
-	border: 3px solid white;
-	border-radius: 6px;
-	z-index: 1;
+	&__button{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.button1,
+		.button2{
+			color: rgb(0, 255, 255);
+			width: max-content;
+			height: 60px;
+			border: 3px solid white;
+			border-radius: 6px;
+			margin: 0 10px;
+			padding: 10px;
+			font-size: 30px;
+		}
+	}
 }
 @function random_range($min, $max) {
 	$rand: random();
