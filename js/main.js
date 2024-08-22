@@ -1752,6 +1752,7 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // 	return maxSum
 // }
 
+// console.log(getMaxSubSum([-1, -2, -3, -9, 10, 1, 3, 3, 1, 19]))
 // console.log(getMaxSubSum([-1, 2, 3, -9]) == 5)
 // console.log(getMaxSubSum([2, -1, 2, 3, -9]) == 6)
 // console.log(getMaxSubSum([-1, 2, 3, -9, 11]) == 11)

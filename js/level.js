@@ -160,7 +160,67 @@ resultBtn.addEventListener('click', () => {
 })
 } */
 // <- === === === === ===  Задача end  === === === === === ->
+// <- === === === === === === ===  Задача === === === === === === === ->
+function sudoku(puzzle){
+	const size = puzzle.length,
+							sectorSize = Math.sqrt(size)
+	function getEmpty(puzzle){
+		for(let i = 0; i < puzzle.length; i++){
+			for(let j = 0; j < puzzle[i].length; j++){
+				if(puzzle[i][j] === 0)	return [i, j]
+			}
+		}
+		return null
+	}
+	function placeNumber(puzzle, row, col, num){
+		for(let i = 0; i < size; i++){
+			if(puzzle[row][i] === num || puzzle[row][col] === num) return false
+		}
+		const startRow = row - (row % sectorSize),
+								startCol = col - (col % sectorSize)
+		for(let i = 0; i < sectorSize; i++){
+			for(let j = 0; j < sectorSize; j++){
+				if(puzzle[startRow + i][startCol + j] === num) return false
+			}
+		}
+		return true
+	}
+	function solve(grid){
+		const emptyPos = getEmpty(grid)
+		if(!emptyPos) return true
+		const [row, col] = emptyPos
+		for(let num = 1; num <= size; num++){
+			if(placeNumber(grid, row, col, num)) {
+				grid[row][col] = num
+				if(solve(grid)) return true
+				grid[row][col] = 0
+			}
+		}
+		return false
+	}
+	if(solve(puzzle)) return puzzle
+	return false
+}
 
+
+
+
+console.log(
+	sudoku([
+		[8, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 3, 6, 0, 0, 0, 0, 0],
+		[0, 7, 0, 0, 9, 1, 0, 0, 0],
+  [0, 0, 2, 0, 0, 0, 6, 8, 0],
+  [0, 0, 0, 5, 0, 7, 0, 0, 0],
+  [0, 9, 8, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 4, 5, 7, 0, 0],
+  [0, 0, 1, 7, 0, 0, 0, 3, 0],
+		[0, 0, 7, 0, 0, 0, 0, 2, 6],
+	])
+)
+
+
+// <- === === === === ===  Задача end  === === === === === ->
 /* <- === === === === === === === === === === === === === === === === === === === ===  Тема  === === === === === === === === === === === === === === === === === === === === -> */
 /* <- === === === === === === === === === === === === === ===  Тема end  === === === === === === === === === === === === === === -> */
 
