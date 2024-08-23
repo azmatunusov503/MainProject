@@ -1759,6 +1759,49 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // console.log(getMaxSubSum([-2, -1, 1, 2]) == 3)
 // console.log(getMaxSubSum([100, -9, 2, -3, 5]) == 100)
 // console.log(getMaxSubSum([1, 2, 3]) == 6)
+
+// === === === === === === === === === === === === === ===  Методы массивов  === === === === === === === === === === === === === ===
+
+// const array = [1, 2, 3, 5,]
+// array.splice(3, 0, 4)
+// console.log(array)
+
+// function removeAddElement(array, index, elDel, arrayElAdd){
+// 	array.splice(index, elDel, ...arrayElAdd)
+// 	return console.log(array)
+// }
+// removeAddElement([1, 2, 3, 4], 1, 3, [13, 14, 15])
+
+// let array = [1, 2]
+// console.log(array.concat([3, 4]))
+// console.log(array.concat([3, 4], [5, 6]))
+// console.log(array.concat([3, 4], 5, 6))
+
+
+// let arrayLike = {
+// 	0: 'что-то',
+// 	1: 'ещё',
+// 	2: 0,
+// 	length: 3,
+// 	[Symbol.isConcatSpreadable]: true,
+// }
+// console.log(array.concat(arrayLike))
+
+const array = [1, 3, 2, false]
+
+console.log(array.indexOf(2))
+console.log(array.indexOf(false))
+console.log(array.includes(false))
+
+
+
+
+// === === === === === === === === === === ===  Методы массивов end === === === === === === === === === === ===
+
+
+
+
+
 /* <- === === === === === === === === === === === === === ===  Массивы end  === === === === === === === === === === === === === === -> */
 
 /* <- === === === === === === === === === === === === === ===  Не понятно что это пока  === === === === === === === === === === === === === === -> */
