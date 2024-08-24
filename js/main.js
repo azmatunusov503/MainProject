@@ -1787,14 +1787,45 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // }
 // console.log(array.concat(arrayLike))
 
-const array = [1, 3, 2, false]
+// const array = [1, 3, 2, false]
 
-console.log(array.indexOf(2))
-console.log(array.indexOf(false))
-console.log(array.includes(false))
+// console.log(array.indexOf(2))
+// console.log(array.indexOf(false))
+// console.log(array.includes(false))
+
+// const arrayUsers = [
+// 	{id: 1, name: 'Mksim'},
+// 	{id: 2, name: 'Petiya'},
+// 	{id: 3, name: 'Masha'},
+// 	{id: 4, name: 'Vasiya'},
+// ]
+// console.log(arrayUsers.find(item => item.id == 3))
+
+// console.log(arrayUsers.findIndex(user => user.name === 'Masha'))
+// console.log(arrayUsers.findLastIndex(user => user.name === 'Masha'))
 
 
+// console.log(arrayUsers.filter(item => item.id < 3))
+// console.log(arrayUsers.map(item => item['name'].length))
 
+// let array = [1, 3, 4, 2, 14, 13]
+// function compareNumeric(a, b){
+// 	if(a > b) return 1 // если первое значение больше второго
+// 	if(a == b) return 0 // если равны
+// 	if(a < b) return -1 // если первое значение меньше второго
+// 	// return (a > b) ? 1 : (a == b) ? 0 : -1
+// }
+// console.log(array.sort(compareNumeric))
+
+// console.log(array.sort((a,b) => a - b))
+
+
+let names = 'Вася, Петя, Маша, Эла'
+
+let array = names.split(', ', 4)
+for (let name of array){
+	console.log(`Сообщение получат: ${name}`)
+}
 
 // === === === === === === === === === === ===  Методы массивов end === === === === === === === === === === ===
 
