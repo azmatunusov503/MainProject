@@ -1794,19 +1794,29 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // console.log(array.includes(false))
 
 // const arrayUsers = [
-// 	{id: 1, name: 'Mksim'},
-// 	{id: 2, name: 'Petiya'},
-// 	{id: 3, name: 'Masha'},
-// 	{id: 4, name: 'Vasiya'},
+	// {id: 1, name: 'Mksim'},
+	// {id: 2, name: 'Petiya'},
+	// {id: 3, name: 'Masha'},
+	// {id: 4, name: 'Vasiya'},
 // ]
 // console.log(arrayUsers.find(item => item.id == 3))
 
 // console.log(arrayUsers.findIndex(user => user.name === 'Masha'))
 // console.log(arrayUsers.findLastIndex(user => user.name === 'Masha'))
 
+const numbers = [1, 4, 9]
+// console.log(numbers.map(Math.sqrt))
+// console.log(numbers.map(num => num * 2))
+const string = '1234567'
+const map = Array.prototype.map.call(string, x => x).reverse().join('')
+console.log(map)
+// console.log(map.call('Hello World', x => x.charCodeAt(0)))
+
+
+
 
 // console.log(arrayUsers.filter(item => item.id < 3))
-// console.log(arrayUsers.map(item => item['name'].length))
+// console.log(arrayUsers.map(item => typeof (item['name'])))
 
 // let array = [1, 3, 4, 2, 14, 13]
 // function compareNumeric(a, b){
@@ -1822,10 +1832,10 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 
 let names = 'Вася, Петя, Маша, Эла'
 
-let array = names.split(', ', 4)
-for (let name of array){
-	console.log(`Сообщение получат: ${name}`)
-}
+// let array = names.split(', ', 3)
+// for (let name of array){
+// console.log(`Сообщение получат: ${name}`, array)
+// }
 
 // === === === === === === === === === === ===  Методы массивов end === === === === === === === === === === ===
 
