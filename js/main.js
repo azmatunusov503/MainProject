@@ -1804,12 +1804,12 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // console.log(arrayUsers.findIndex(user => user.name === 'Masha'))
 // console.log(arrayUsers.findLastIndex(user => user.name === 'Masha'))
 
-const numbers = [1, 4, 9]
+// const numbers = [1, 4, 9]
 // console.log(numbers.map(Math.sqrt))
 // console.log(numbers.map(num => num * 2))
-const string = '1234567'
-const map = Array.prototype.map.call(string, x => x).reverse().join('')
-console.log(map)
+// const string = '1234567'
+// const map = Array.prototype.map.call(string, x => x).reverse().join('')
+// console.log(map)
 // console.log(map.call('Hello World', x => x.charCodeAt(0)))
 
 
@@ -1830,13 +1830,33 @@ console.log(map)
 // console.log(array.sort((a,b) => a - b))
 
 
-let names = 'Вася, Петя, Маша, Эла'
+// let names = 'Вася, Петя, Маша, Эла'
 
 // let array = names.split(', ', 3)
 // for (let name of array){
 // console.log(`Сообщение получат: ${name}`, array)
 // }
 
+
+let army = {
+	minAge: 18,
+	maxAge: 27,
+	canJoin(user){
+		return user.age >= this.minAge && user.age < this.maxAge
+	},
+}
+let users = [
+	{age: 16},
+	{age: 22},
+ {age: 25},
+ {age: 30},
+ {age: 19},
+]
+let soldiers = users.filter(army.canJoin, army)
+console.log(soldiers.length)
+console.log(soldiers[0].age)
+console.log(soldiers[1].age)
+console.log(soldiers[2].age)
 // === === === === === === === === === === ===  Методы массивов end === === === === === === === === === === ===
 
 
