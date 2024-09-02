@@ -1857,6 +1857,9 @@ console.log(soldiers.length)
 console.log(soldiers[0].age)
 console.log(soldiers[1].age)
 console.log(soldiers[2].age)
+
+
+
 // === === === === === === === === === === ===  Методы массивов end === === === === === === === === === === ===
 
 
