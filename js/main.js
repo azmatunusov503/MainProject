@@ -1812,8 +1812,12 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // console.log(map)
 // console.log(map.call('Hello World', x => x.charCodeAt(0)))
 
-
-
+const words = ['spray', 'elite', 'exuberant', 'destruction', 'present']
+// words.forEach()
+for(let key of words){
+	console.log(`${key} ${key.length > 6}`)
+}
+// console.log(words.filter(word => word.length > 5))
 
 // console.log(arrayUsers.filter(item => item.id < 3))
 // console.log(arrayUsers.map(item => typeof (item['name'])))
@@ -1857,9 +1861,6 @@ console.log(soldiers.length)
 console.log(soldiers[0].age)
 console.log(soldiers[1].age)
 console.log(soldiers[2].age)
-
-
-
 // === === === === === === === === === === ===  Методы массивов end === === === === === === === === === === ===
 
 
