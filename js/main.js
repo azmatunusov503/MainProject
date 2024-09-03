@@ -1762,105 +1762,51 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 
 // === === === === === === === === === === === === === ===  Методы массивов  === === === === === === === === === === === === === ===
 
-// const array = [1, 2, 3, 5,]
-// array.splice(3, 0, 4)
+
+// const array = [1, 2, 3, 4, 5, 6, 7, 8]
+// console.log(array.splice(1, 4))
+// console.log(array.splice(1, 3, 123))
 // console.log(array)
-
-// function removeAddElement(array, index, elDel, arrayElAdd){
-// 	array.splice(index, elDel, ...arrayElAdd)
-// 	return console.log(array)
-// }
-// removeAddElement([1, 2, 3, 4], 1, 3, [13, 14, 15])
-
-// let array = [1, 2]
-// console.log(array.concat([3, 4]))
-// console.log(array.concat([3, 4], [5, 6]))
-// console.log(array.concat([3, 4], 5, 6))
-
-
-// let arrayLike = {
-// 	0: 'что-то',
-// 	1: 'ещё',
-// 	2: 0,
-// 	length: 3,
+// console.log(array.splice(-1, 0, 12, 41))
+// console.log(array)
+// console.log(array.length - 4)
+// console.log(array.slice(4))
+// console.log(array.slice(-4))
+// const array = [1, 2, 3]
+// console.log(array.concat([3, 4, 5], array))
+// const arrayObj = {
+// 	0: 'foo',
+// 	length: 1,
 // 	[Symbol.isConcatSpreadable]: true,
 // }
-// console.log(array.concat(arrayLike))
+// console.log(array.concat(arrayObj))
 
-// const array = [1, 3, 2, false]
+// array.forEach((item, index, array) => {
+// 	console.log(`index: ${index}, item: ${item}, array: ${array}`, array)
+// })
+// const array = [1, 3, 5, 'foo', NaN]
+// console.log(array.indexOf('foo'))
+// console.log(array.indexOf(NaN))
+// console.log(array.includes(NaN))
 
-// console.log(array.indexOf(2))
-// console.log(array.indexOf(false))
-// console.log(array.includes(false))
+// const obj = {
+// 	minAge: 12,
+// 	maxAge: 18,
+// 	canJoin(user){
+// 		return user.age >= this.minAge && user.age < this.maxAge
+// 	}
+// }
 
-// const arrayUsers = [
-	// {id: 1, name: 'Mksim'},
-	// {id: 2, name: 'Petiya'},
-	// {id: 3, name: 'Masha'},
-	// {id: 4, name: 'Vasiya'},
+// const array = [	
+// 	{id: 1, name: 'Вася', age: 11},
+// 	{id: 2, name: 'Петя', age: 14},
+// 	{id: 3, name: 'Маша', age: 20},
 // ]
-// console.log(arrayUsers.find(item => item.id == 3))
+// console.log(array.filter(obj.canJoin, obj))
 
-// console.log(arrayUsers.findIndex(user => user.name === 'Masha'))
-// console.log(arrayUsers.findLastIndex(user => user.name === 'Masha'))
-
-// const numbers = [1, 4, 9]
-// console.log(numbers.map(Math.sqrt))
-// console.log(numbers.map(num => num * 2))
-// const string = '1234567'
-// const map = Array.prototype.map.call(string, x => x).reverse().join('')
-// console.log(map)
-// console.log(map.call('Hello World', x => x.charCodeAt(0)))
-
-const words = ['spray', 'elite', 'exuberant', 'destruction', 'present']
-// words.forEach()
-for(let key of words){
-	console.log(`${key} ${key.length > 6}`)
-}
-// console.log(words.filter(word => word.length > 5))
-
-// console.log(arrayUsers.filter(item => item.id < 3))
-// console.log(arrayUsers.map(item => typeof (item['name'])))
-
-// let array = [1, 3, 4, 2, 14, 13]
-// function compareNumeric(a, b){
-// 	if(a > b) return 1 // если первое значение больше второго
-// 	if(a == b) return 0 // если равны
-// 	if(a < b) return -1 // если первое значение меньше второго
-// 	// return (a > b) ? 1 : (a == b) ? 0 : -1
-// }
-// console.log(array.sort(compareNumeric))
-
-// console.log(array.sort((a,b) => a - b))
+// console.log(array.findLastIndex(item => item.id == 1))
 
 
-// let names = 'Вася, Петя, Маша, Эла'
-
-// let array = names.split(', ', 3)
-// for (let name of array){
-// console.log(`Сообщение получат: ${name}`, array)
-// }
-
-
-let army = {
-	minAge: 18,
-	maxAge: 27,
-	canJoin(user){
-		return user.age >= this.minAge && user.age < this.maxAge
-	},
-}
-let users = [
-	{age: 16},
-	{age: 22},
- {age: 25},
- {age: 30},
- {age: 19},
-]
-let soldiers = users.filter(army.canJoin, army)
-console.log(soldiers.length)
-console.log(soldiers[0].age)
-console.log(soldiers[1].age)
-console.log(soldiers[2].age)
 // === === === === === === === === === === ===  Методы массивов end === === === === === === === === === === ===
 
 
