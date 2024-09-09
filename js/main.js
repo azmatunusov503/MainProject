@@ -1614,6 +1614,33 @@ console.log(accumulator.value) */
 
 /* <- === === === === === === === === === === === === === ===  Опциональная цепочка '?.'  === === === === === === === === === === === === === === -> */
 
+/* <- === === === === === === === === === === === === === ===  Строки  === === === === === === === === === === === === === === -> */
+// let str = ''
+// console.log(str.length)
+// let str = 'Hello'
+// console.log(str[str.length - 5])
+// console.log(str.at(0))
+
+// let str = 'Widget with id'
+// console.log(str.indexOf('Widget'))
+// console.log(str.indexOf('widget'))
+// console.log(str.length)
+// console.log(str.indexOf('id'))
+
+let str = 'Ослик Иа-Иа посмотрел на виадук Иа'
+let target = 'Иа'
+let pos = 0
+// while(true){
+// 	let foundPos = str.indexOf(target, pos)
+// 	if(foundPos == -1) break
+// 	console.log(`Найдено тут: ${foundPos}`)
+// 	pos = foundPos + 1
+// }
+while((pos = str.indexOf(target, pos + 1)) != -1){
+	console.log(`Найдено тут: ${pos}`)
+}
+/* <- === === === === === === === === === === === === === ===  Строки end  === === === === === === === === === === === === === === -> */
+
 /* <- === === === === === === === === === === === === === ===  Массивы  === === === === === === === === === === === === === === -> */
 
 // const arr = [1, 2, 3, 4, 5, 6, 7]
