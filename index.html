@@ -4,72 +4,252 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- добавим стили mocha для отображения результатов -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+	<!-- добавляем сам фреймворк mocha -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+	<script>
+		// включаем режим тестирования в стиле BDD
+		mocha.setup('bdd');
+	</script>
+	<!-- добавим chai -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+	<script>
+		// chai предоставляет большое количество функций. Объявим assert глобально
+		let assert = chai.assert;
+	</script>
 	<link rel="website icon" type="png" href="images/js.png">
 	<title>JS</title>
-	<script src="main.js" defer></script>
-	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+	<div class="wrapper">
+		<!-- <header class="header">
+			<main class="container">
+				<div class="header__button">
+					<button id="controlButton" class="button2">start</button>
+					<button id="resultButton"  class="button1" disabled>result</button>
+				</div>
+			</main>
+		</header> -->
+		<div class="wrapper-bg">
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+			<div class="snow"></div>
+		</div>
+	</div>
 
-	<!-- 
-		Задание: (Возрост)
-  пользователь должен ввесть свой возрост в цифрах
-  1) если возрост больше 0 или равен 18 показывается сообщение (Вы еще молоды. Вам нужно учится)
-  2) если возрост больше 18 или равен 50 показывается сообщение (Вам нужно работать)
-  3) если возрост больше 50 или равен 59 показывается сообщение (Вам скоро на пенсию)
-  4) если возрост больше 59 или равен 150 показывается сообщение (Вы пенсионер)
-  5) если не одно условие не подошло то (Что-то пошло не так)
-    сообщение console.log()
-	-->
 
-	<!-- 
-		Задание: (Часы)
-  пользователь должен ввесть время в цифрах
-  от 0 до 24 и ему должен отдать п ромежуток в сутках 
-  например:
-      2 часа ночи
-  все сделать через условие if
-  сообщение console.log()
-	-->
 
-	<!-- 
-  Задание: (Часы)
-    пользователь вводит промежуток времени от 0 до 24
-    ему выходите сообщение 
-    от 5 до 12 (Доброе утро)
-    от 12 до 18 (Добрый день)
-    от 18 до 22 (добрый вечер)
-    от 22 до 4 утра (доброй ночи)
-    если число введено больше 24 то (не верное число)
-	-->
+	<script src="js/main.js"></script>
+	<script src="js/KataTask.js"></script>
+	<!-- <script src="js/sliderClass.js"></script> -->
 
-	<!-- 
-  Задание: (мячи)
-    пользователь вводит любое число мячей лежащих в зале 
-    ему выходите предложение в консоле с правильным окончанием
-	в зале находится 0 мячей 
-		1 мяч
-		2 мяча
-		10 мячей
-  и т.д.
-	-->
-	<!-- 
- 	Задание: (Команды) 
-  создаёте пустой массив
-  Потом бесконечно начинает работать окно ввода текста
-  Вы задаете команду например добавить элемент (добавить элемен, Иван)
-  Например:
-      add, Иван
-  Вы обрабатываете команду add и добавляете в массив строку Иван
-  Дальше Вы задаете команду удалить элемент (удалить элемент, Иван)
-  Например:
-      del, Иван
-  И когда Вы напишете команду стоп то окно ввода текста больше не появлятся
-  Все результаты добавления и удаления выводятся в console и после остановки выводится конечный результат 
- -->
 
-	<!-- проверить сколько глассных и сколько согласных букв в предложение (предложение любое)-->
+
+
+	<!-- <div id="mocha"></div>
+	<script>
+		mocha.run();
+	</script> -->
 
 </body>
 

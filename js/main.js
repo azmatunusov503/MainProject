@@ -1354,8 +1354,6 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 /* <- === === === === === === === === === === === === === ===  Задачи  === === === === === === === === === === === === === === -> */
 /* Напишите функцию cloneObject(obj), которая принимает объект и возвращает его глубокую копию. */
 
-
-
 /* --! */
 
 // const car = {
@@ -1381,9 +1379,6 @@ pow(1, 100) = 1 * 1 * ...* 1 = 1
 // console.log(car.make)
 // const cloned = cloneObject(cars);
 // console.log(`1`, cloned);
-
-
-
 
 /* <- === === === === === === === === === === === === === ===  Задачи  === === === === === === === === === === === === === === -> */
 // function makeUser() {
@@ -1604,42 +1599,12 @@ console.log(accumulator.value) */
 
 /* <- === === === === === === === === === === === === === ===  Объекты end  === === === === === === === === === === === === === === -> */
 
-
-
 /* <- === === === === === === === === === === === === === ===  Опциональная цепочка '?.'  === === === === === === === === === === === === === === -> */
 
 // let user = {}
 // console.log(user?.address)
 
-
-/* <- === === === === === === === === === === === === === ===  Опциональная цепочка '?.' end === === === === === === === === === === === === === === -> */
-
-/* <- === === === === === === === === === === === === === ===  Строки  === === === === === === === === === === === === === === -> */
-// let str = ''
-// console.log(str.length)
-// let str = 'Hello'
-// console.log(str[str.length - 5])
-// console.log(str.at(0))
-
-// let str = 'Widget with id'
-// console.log(str.indexOf('Widget'))
-// console.log(str.indexOf('widget'))
-// console.log(str.length)
-// console.log(str.indexOf('id'))
-
-let str = 'Ослик Иа-Иа посмотрел на виадук Иа'
-let target = 'Иа'
-let pos = 0
-// while(true){
-// 	let foundPos = str.indexOf(target, pos)
-// 	if(foundPos == -1) break
-// 	console.log(`Найдено тут: ${foundPos}`)
-// 	pos = foundPos + 1
-// }
-while((pos = str.indexOf(target, pos + 1)) != -1){
-	console.log(`Найдено тут: ${pos}`)
-}
-/* <- === === === === === === === === === === === === === ===  Строки end  === === === === === === === === === === === === === === -> */
+/* <- === === === === === === === === === === === === === ===  Опциональная цепочка '?.'  === === === === === === === === === === === === === === -> */
 
 /* <- === === === === === === === === === === === === === ===  Массивы  === === === === === === === === === === === === === === -> */
 
@@ -1738,8 +1703,6 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // console.log(array)
 // console.log(array.length)
 
-
-
 // const styles = ['Джаз', 'Блюз',]
 
 // console.log(styles)
@@ -1789,7 +1752,6 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 
 // === === === === === === === === === === === === === ===  Методы массивов  === === === === === === === === === === === === === ===
 
-
 // const array = [1, 2, 3, 4, 5, 6, 7, 8]
 // console.log(array.splice(1, 4))
 // console.log(array.splice(1, 3, 123))
@@ -1824,7 +1786,7 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // 	}
 // }
 
-// const array = [	
+// const array = [
 // 	{id: 1, name: 'Вася', age: 11},
 // 	{id: 2, name: 'Петя', age: 14},
 // 	{id: 3, name: 'Маша', age: 20},
@@ -1833,24 +1795,14 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 
 // console.log(array.findLastIndex(item => item.id == 1))
 
-function camelize(str){
-	return str.split('-').map((item, index) => index == 0 ? item: item[0].toUpperCase() + item.slice(1)).join('')
-}
+// function camelize(str){
+// 	return str.split('-').map((item, index) => index == 0 ? item: item[0].toUpperCase() + item.slice(1)).join('')
+// }
 // console.log(camelize('back-color'))
-
-
-
 
 // === === === === === === === === === === ===  Методы массивов end === === === === === === === === === === ===
 
-
-
-
-
 /* <- === === === === === === === === === === === === === ===  Массивы end  === === === === === === === === === === === === === === -> */
-
-
-
 
 /* <- === === === === === === === === === === === === === ===  Не понятно что это пока  === === === === === === === === === === === === === === -> */
 /* <- === === === === === === ===  Задачи === === === === === === === -> */
@@ -2252,11 +2204,9 @@ function camelize(str){
 // console.log(num)
 // console.log(Number.isNaN())
 
-
 // function random(min, max){
 // 	return Math.round(min + Math.random() * (max - min))
 // }
 // console.log(random(1, 5))
-
 
 /* <- === === === === === === === === === === === === === ===  Тип данных числа end  === === === === === === === === === === === === === === -> */

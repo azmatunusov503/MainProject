@@ -1,0 +1,41 @@
+@mixin media($size) {
+	@media (max-width: #{$size}px){
+			@content;
+	}
+}
+@mixin  fonts($fz: null, $lh: null, $color: null, $fw: null) {
+	font-size: $fz;
+	line-height: $lh;
+	color: $color;
+	font-weight: $fw;
+}
+@mixin  container() {
+	width: 100%;
+	max-width: 1320px;
+	padding: 0 15px;
+	margin: 0 auto;
+	@include media(1400){max-width: 1140px;}
+	@include media(1200){max-width: 960px;}
+	@include media(992){max-width: 720px;}
+	@include media(768){max-width: 540px;}
+	@include media(576){max-width: 100%;}
+}
+@mixin fontFace($url, $fileName, $name, $weight, $fontName) {
+	@font-face {
+			font-family: $fontName;
+			src: url('../#{$url}/#{$fileName}#{$name}.ttf') format('truetype');
+			font-weight: $weight;
+	}
+}
+$notosans: ('-Regular', 400), ('-SemiBold', 600), ('-Medium', 500), ('-Light', 300);
+$roboto: ('-Regular', 400), ('-Bold', 700);
+$icons: ('-brands-400', 400), ('-light-300', 300);
+@each $name, $weight in $notosans{
+	@include fontFace('fonts/noto-sans', 'NotoSans', $name, $weight, 'noto-sans')
+}
+@each $name, $weight in $roboto{
+	@include fontFace('fonts/roboto', 'Roboto', $name, $weight, 'roboto')
+}
+@each $name, $weight in $icons{
+	@include fontFace('fonts/webfonts', 'fa', $name, $weight, 'icons')
+}
