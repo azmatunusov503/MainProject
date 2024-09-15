@@ -1619,21 +1619,89 @@ console.log(accumulator.value) */
 // console.log(str.length)
 // console.log(str.indexOf('id'))
 
-let str = 'Ослик Иа-Иа посмотрел на виадук Иа'
-let target = 'Иа'
-let pos = 0
+// let str = "stringify"
+// for(let i = 0; i < str.length; i++){
+// let res = str.split()
+// console.log(res)
+// console.log(str.slice(str.length - 1))
+// }
+
+// let str = 'Ослик Иа-Иа посмотрел на виадук Иа'
+// let target = 'Иа'
+// let pos = 0
 // while(true){
 // 	let foundPos = str.indexOf(target, pos)
 // 	if(foundPos == -1) break
 // 	console.log(`Найдено тут: ${foundPos}`)
 // 	pos = foundPos + 1
 // }
-while((pos = str.indexOf(target, pos + 1)) != -1){
-	console.log(`Найдено тут: ${pos}`)
+// while((pos = str.indexOf(target, pos + 1)) != -1){
+// 	console.log(`Найдено тут: ${pos}`)
+// }
+
+// let str = ''
+// for(let i = 65; i <= 220; i++){
+// 	str += String.fromCodePoint(i)
+// }
+// console.log(str)
+
+
+let str = 'Österreich'
+			,str1 = 'Zealand'
+console.log(str1.split(''))
+
+function sumStr(str){
+	let res = 0
+
+ str.split('').forEach(el => {
+		el
+	})
+	return [el]
 }
+
+
+function sumStr1(str) {
+	let arrStr = str.split('')
+				,resStr = ''
+	for (let i = 0; i < str.length; i++) {
+		resStr = arrStr[i].codePointAt()
+		console.log(`${resStr}   ${i}`)
+	}
+	return [resStr]
+}
+console.log(sumStr(str))
+console.log(sumStr(str1))
+console.log('--------------------------------------------------------------')
+console.log(sumStr1(str))
+console.log(sumStr1(str1))
+
+
+
+// let str3 = 'Zealand'
+// 			,arrStr = str3.split('')
+// 			,resStr = ''
+
+// for(let i = 0; i < str3.length; i++){
+// 	resStr = [arrStr.pop().codePointAt()]
+// }
+// console.log(resStr)
+
+const sort = arr => {
+	if (arr.length <= 1) {
+		return arr
+	}
+	const supportingEl = arr.pop()
+
+	return [
+		...sort(arr.filter(el => el <= supportingEl)),
+		supportingEl,
+		...sort(arr.filter(el => el > supportingEl)),
+	]
+}
+
+console.log(sort([4, 5, 2]))
+
 /* <- === === === === === === === === === === === === === ===  Строки end  === === === === === === === === === === === === === === -> */
-
-
 
 /* <- === === === === === === === === === === === === === ===  Массивы  === === === === === === === === === === === === === === -> */
 
