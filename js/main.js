@@ -1614,6 +1614,79 @@ console.log(accumulator.value) */
 
 
 
+/* <- === === === === === === === === === === === === === ===  Строки  === === === === === === === === === === === === === === -> */
+// let str = ''
+// console.log(str.length)
+// let str = 'Hello'
+// console.log(str[str.length - 5])
+// console.log(str.at(0))
+
+// let str = 'Widget with id'
+// console.log(str.indexOf('Widget'))
+// console.log(str.indexOf('widget'))
+// console.log(str.length)
+// console.log(str.indexOf('id'))
+
+// let str = "stringify"
+// for(let i = 0; i < str.length; i++){
+// let res = str.split()
+// console.log(res)
+// console.log(str.slice(str.length - 1))
+// }
+
+// let str = 'Ослик Иа-Иа посмотрел на виадук Иа'
+// let target = 'Иа'
+// let pos = 0
+// while(true){
+// 	let foundPos = str.indexOf(target, pos)
+// 	if(foundPos == -1) break
+// 	console.log(`Найдено тут: ${foundPos}`)
+// 	pos = foundPos + 1
+// }
+// while((pos = str.indexOf(target, pos + 1)) != -1){
+// 	console.log(`Найдено тут: ${pos}`)
+// }
+
+// let str = ''
+// for(let i = 65; i <= 220; i++){
+// 	str += String.fromCodePoint(i)
+// }
+// console.log(str)
+
+let str = 'Österreich',
+	str1 = 'Zealand'
+
+function sumStr(str) {
+	let resArray = [],
+		resInt = 0,
+		arrayStr = str.split('')
+	arrayStr.forEach(el => {
+		resArray.push(el.codePointAt())
+	})
+	resInt = resArray.reduce((acc, res) => acc + res)
+	return resInt
+}
+
+console.log(sumStr(str))
+console.log(sumStr(str1))
+
+/* const sort = arr => {
+	if (arr.length <= 1) {
+		return arr
+	}
+	const supportingEl = arr.pop()
+
+	return [
+		...sort(arr.filter(el => el <= supportingEl)),
+		supportingEl,
+		...sort(arr.filter(el => el > supportingEl)),
+	]
+}
+
+console.log(sort([4, 5, 2])) */
+
+/* <- === === === === === === === === === === === === === ===  Строки end  === === === === === === === === === === === === === === -> */
+
 /* <- === === === === === === === === === === === === === ===  Массивы  === === === === === === === === === === === === === === -> */
 
 // const arr = [1, 2, 3, 4, 5, 6, 7]
