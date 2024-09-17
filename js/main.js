@@ -1645,48 +1645,24 @@ console.log(accumulator.value) */
 // }
 // console.log(str)
 
+let str = 'Österreich',
+	str1 = 'Zealand'
 
-let str = 'Österreich'
-			,str1 = 'Zealand'
-console.log(str1.split(''))
-
-function sumStr(str){
-	let res = 0
-
- str.split('').forEach(el => {
-		el
+function sumStr(str) {
+	let resArray = [],
+		resInt = 0,
+		arrayStr = str.split('')
+	arrayStr.forEach(el => {
+		resArray.push(el.codePointAt())
 	})
-	return [el]
+	resInt = resArray.reduce((acc, res) => acc + res)
+	return resInt
 }
 
-
-function sumStr1(str) {
-	let arrStr = str.split('')
-				,resStr = ''
-	for (let i = 0; i < str.length; i++) {
-		resStr = arrStr[i].codePointAt()
-		console.log(`${resStr}   ${i}`)
-	}
-	return [resStr]
-}
 console.log(sumStr(str))
 console.log(sumStr(str1))
-console.log('--------------------------------------------------------------')
-console.log(sumStr1(str))
-console.log(sumStr1(str1))
 
-
-
-// let str3 = 'Zealand'
-// 			,arrStr = str3.split('')
-// 			,resStr = ''
-
-// for(let i = 0; i < str3.length; i++){
-// 	resStr = [arrStr.pop().codePointAt()]
-// }
-// console.log(resStr)
-
-const sort = arr => {
+/* const sort = arr => {
 	if (arr.length <= 1) {
 		return arr
 	}
@@ -1699,7 +1675,7 @@ const sort = arr => {
 	]
 }
 
-console.log(sort([4, 5, 2]))
+console.log(sort([4, 5, 2])) */
 
 /* <- === === === === === === === === === === === === === ===  Строки end  === === === === === === === === === === === === === === -> */
 
