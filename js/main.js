@@ -1648,7 +1648,7 @@ console.log(accumulator.value) */
 // }
 
 // let str = ''
-// for(let i = 65; i <= 220; i++){
+// for(let i = 65; i <= 220; i++){js/main.js
 // 	str += String.fromCodePoint(i)
 // }
 // console.log(str)
@@ -1667,8 +1667,7 @@ function sumStr(str) {
 	return resInt
 }
 
-console.log(sumStr(str))
-console.log(sumStr(str1))
+console.log(sumStr(str), sumStr(str1))
 
 /* const sort = arr => {
 	if (arr.length <= 1) {
