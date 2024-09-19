@@ -1,4 +1,12 @@
 dir - ввыводит директории
-Ls - тоже ввыводит директории
+ls - тоже ввыводит директории
 cd .\  - позволяет перейти по абсолютному пути или относительному пути
-	cd C: -
+	cd C: - абсолютному пути
+	cd .\ - относительному пути
+cd .. - выходит с папки
+mkdir  nameFloder - создает папку
+echo arguments > nameFile - создает файл и добавляет аргумент
+cat .\nameFile - выводит содержимое файла
+rm -r .\nameFile - удаляет файл
+cp .\nameFloder .\nameFloder2 - копирует с nameFloder на nameFloder2
+mv .\nameFloder .\nameFloder2 - перемещает с nameFloder на nameFloder2

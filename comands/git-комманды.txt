@@ -16,7 +16,7 @@ Git config user.email 'UserEmail' - ваша почта
 Git config gui.encoding utf-8 - кодировка
 Git --version – версия гита
 Git branch – список веток 
-
+Git rm --cached nameFolder - удаляет папку nameFolder из отслеживания Git, но сама папка и её содержимое остаются на вашем диске
 
 работа в команде последовательность команд
 git add .
