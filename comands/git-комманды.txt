@@ -1,0 +1,29 @@
+Git status – проверка статуса для коммитов
+Git log – список созданных коммитов
+Git merge – соединение веток
+Ssh-keygen – создание ключа для подключение к удалённому репозиторию
+Git push – Заливка на репозиторий 
+Git pull – скачать с репозитория
+Git clone – клонировать репозиторий
+Git remote add test – создание ссылки на репозиторий
+Git add . – Добавление всех файлов в очередь на коммит
+Git commit -m ‘комментарий’ – создание коммита
+Git add index.html – добавление определённого файла
+Gitk – просмотр всего репозитория 
+Git config --list – вся инфа конфигурации
+Git config user.name 'UserName' - ваше имя
+Git config user.email 'UserEmail' - ваша почта
+Git config gui.encoding utf-8 - кодировка
+Git --version – версия гита
+Git branch – список веток 
+
+
+работа в команде последовательность команд
+git add .
+git commit -m namecommit
+git push -u url(origin) master(branch)
+если получили error
+git pull url(origin) master(branch)
+git add .
+git commit -m namecommit
+git push -u url(origin) master(branch)

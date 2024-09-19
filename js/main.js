@@ -1669,6 +1669,7 @@ function sumStr(str) {
 
 console.log(sumStr(str), sumStr(str1))
 
+
 /* const sort = arr => {
 	if (arr.length <= 1) {
 		return arr
@@ -2186,8 +2187,8 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // 	beforeEach(() => alert("Перед тестом – начинаем выполнять тест"));
 // 	afterEach(() => alert("После теста – заканчиваем выполнение теста"));
 
-// 	it('тест 1', () => alert(1));
-// 	it('тест 2', () => alert(2));
+	// it('тест 1', () => alert(1));
+	// it('тест 2', () => alert(2));
 
 // });
 
