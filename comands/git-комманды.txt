@@ -17,6 +17,9 @@ Git config gui.encoding utf-8 - кодировка
 Git --version – версия гита
 Git branch – список веток 
 Git rm --cached nameFolder - удаляет папку nameFolder из отслеживания Git, но сама папка и её содержимое остаются на вашем диске
+Git remote -v - проверка текущие удалённый репозитории
+Git remote set-url nameBranch NewLink - чтобы изменить URL
+
 
 работа в команде последовательность команд
 git add .
