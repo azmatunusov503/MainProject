@@ -1653,22 +1653,30 @@ console.log(accumulator.value) */
 // }
 // console.log(str)
 
-let str = 'Österreich',
-	str1 = 'Zealand'
+// let str = 'Österreich',
+// 	str1 = 'Zealand'
 
-function sumStr(str) {
-	let resArray = [],
-		resInt = 0,
-		arrayStr = str.split('')
-	arrayStr.forEach(el => {
-		resArray.push(el.codePointAt())
-	})
-	resInt = resArray.reduce((acc, res) => acc + res)
-	return resInt
+// function sumStr(str) {
+// 	let resArray = [],
+// 		resInt = 0,
+// 		arrayStr = str.split('')
+// 	arrayStr.forEach(el => {
+// 		resArray.push(el.codePointAt())
+// 	})
+// 	resInt = resArray.reduce((acc, res) => acc + res)
+// 	return resInt
+// }
+
+// console.log(sumStr(str), sumStr(str1))
+
+
+
+function ucFirst(str){
+	return str[0].toUpperCase() + str.slice(1)
 }
 
-console.log(sumStr(str), sumStr(str1))
-
+let str = 'вася'
+console.log(ucFirst(str))
 
 /* const sort = arr => {
 	if (arr.length <= 1) {
