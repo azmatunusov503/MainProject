@@ -1671,12 +1671,28 @@ console.log(accumulator.value) */
 
 
 
-function ucFirst(str){
-	return str[0].toUpperCase() + str.slice(1)
+// function ucFirst(str){
+// 	return str[0].toUpperCase() + str.slice(1)
+// }
+
+// let str = 'вася'
+// console.log(ucFirst(str))
+
+// function checkSpam(str){
+// 	let lowerStr = str.toLowerCase()
+// 	return lowerStr.includes('viagra') || lowerStr.includes('xxx')
+// }
+// console.log(checkSpam('buy ViAgRA now'))
+// console.log( checkSpam('free xxxxx') )
+// console.log( checkSpam("innocent rabbit") )
+let str = 'Вот, что мне хотелось бы сказать на эту тему:'
+			,strRes = str.slice(0, 20)
+console.log(strRes)
+console.log(truncate(strRes))
+function truncate(str, maxLength){
+	return (str.length > maxLength) ? str.slice(0, maxLength - 1) + '...' : str
 }
 
-let str = 'вася'
-console.log(ucFirst(str))
 
 /* const sort = arr => {
 	if (arr.length <= 1) {
