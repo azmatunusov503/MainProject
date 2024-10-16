@@ -231,3 +231,119 @@ console.log(
 // <- === === === === === === ===  Задача === === === === === === === ->
 // <- === === === === ===  Задача end  === === === === === ->
 
+/* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 7.10   === === === === === === === === === === === === === === === === === === === === -> */
+/* === Задача
+	Массивы
+	Написать 2 функции:
+	- шифратор пароля - функция принимает пароль, разбивает по символам, меняет местами какие-то буквы по заданному алгоритму и возвращает строку.
+	- проверка пароля - принимает зашифрованный пароль и второй пароль. Воспроизводит алгоритм назад на зашифрованном пароле и возвращает true, если он совпадает со вторым паролем и false, если нет.
+	Пример:
+	crypto('password') => ssapdorw
+	check('ssapdorw', 'password') => true
+	check('ssapdorw', 'wrong') => false
+=== */
+
+/* ===
+Code
+=== */
+
+let password = /* prompt('Введите пароль') */ 'password'
+			,secondPassword = /* prompt('Введите второй пароль') */ 'password'
+function encryptDecrypt(pass, userPassCheck) {
+	let arrPass = pass.split('')
+
+	function crypto(arr) {
+		const index = Array.from(arr.keys())
+
+		arr.forEach((_, i) => {
+			const j = Math.floor(Math.random() * (i + 1));
+			[arr[i], arr[j]] = [arr[j], arr[i]];
+			[index[i], index[j]] = [index[j], index[i]];
+		})
+
+		return [arr.join(''), index]
+	}
+
+ function unshuffled(shuffledString, index, passCheck){
+
+		const arr = Array.from(shuffledString)
+		const originalArrPass = new Array(arr.length);
+		index.forEach((_, i) => {
+			originalArrPass[index[i]] = arr[i]
+		})
+		// for(let i = 0; i < index.length; i++){
+		// 	originalArrPass[index[i]] = arr[i]
+		// }
+		return [originalArrPass.join(''), passCheck === originalArrPass.join('')]
+	}
+	function showCheckResult(arrayPassword){
+		const [shuffled, index] = crypto(arrayPassword)
+							,[_, resBoolean] = unshuffled(shuffled, index, userPassCheck)
+		return {
+			'+Пароль': pass,
+			'Второй пароль': userPassCheck,
+			'Проверка' : resBoolean,
+			'Зашифрованный': shuffled
+		}
+		// return unshuffled(shuffled, index, userPassCheck)
+	}
+	return showCheckResult(arrPass)
+}
+
+// console.log(encryptDecrypt(password, secondPassword))
+
+
+function crypto(arr) {
+	const index = Array.from(arr.keys())
+
+	for (let i = arr.length - 1; i > 0; i--) {
+	
+		const j = Math.floor(Math.random() * (i + 1));
+	
+		[arr[i], arr[j]] = [arr[j], arr[i]];
+		[index[i], index[j]] = [index[j], index[i]];
+	
+	}
+
+	return [arr.join(''), index]
+}
+
+// console.log(encryptDecrypt(password, secondPassword))
+// function test(arr){
+// 	let index = Array.from(arr.keys())
+// 	for(let i = 0; i < arr.length - 1; i++){
+// 		const j = Math.floor(Math.random() * (i + 1));
+// 		[arr[i], arr[j]] = [arr[j], arr[i]];
+// 		[index[i], index[j]] = [index[j], index[i]];
+// 	}
+// 	return arr.join('')
+// }
+
+// function test2(arr){
+// 	const index = Array.from(arr.keys())
+// 	arr.forEach((_, i) => {
+// 		const j = Math.floor(Math.random() * (i + 1));
+// 		[arr[i], arr[j]] = [arr[j], arr[i]];
+// 		[index[i], index[j]] = [index[j], index[i]];
+// 	})
+// 	return arr.join('')
+// }
+// console.log(test('passwords'.split('')))
+// console.log(test2('passwords'.split('')))
+
+
+// let arr = [1, 2, 3, 4]
+// 			,i = 1
+// 			,j = 2;
+// console.log(arr);
+// [arr[i], arr[j]] = [arr[j], arr[i]];
+// console.log(arr)
+/*
+? arr[i] (который был 2) теперь будет равен 3
+? arr[j] (который был 3) теперь будет равен 2
+*/
+
+/* === Вопросы
+	Вопросов нет.
+=== */
+/* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 7.10 end  === === === === === === === === === === === === === === === === === === === === -> */

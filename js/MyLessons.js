@@ -1685,13 +1685,14 @@ console.log(accumulator.value) */
 // console.log(checkSpam('buy ViAgRA now'))
 // console.log( checkSpam('free xxxxx') )
 // console.log( checkSpam("innocent rabbit") )
-let str = 'Вот, что мне хотелось бы сказать на эту тему:'
-			,strRes = str.slice(0, 20)
-console.log(strRes)
-console.log(truncate(strRes))
-function truncate(str, maxLength){
-	return (str.length > maxLength) ? str.slice(0, maxLength - 1) + '...' : str
-}
+// let str = 'Вот, что мне хотелось бы сказать на эту тему:'
+// 			,strRes = str.slice(0, 20)
+// console.log(strRes)
+// function truncate(str, maxLength){
+// 	return (str.length > maxLength) ? str.slice(0, maxLength - 1) + '…' : str 
+// }
+// let resStr = truncate(str, 20) 
+// console.log(resStr.length)
 
 
 /* const sort = arr => {
@@ -1854,6 +1855,10 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // console.log(getMaxSubSum([-2, -1, 1, 2]) == 3)
 // console.log(getMaxSubSum([100, -9, 2, -3, 5]) == 100)
 // console.log(getMaxSubSum([1, 2, 3]) == 6)
+
+// let array = new Array(12)
+// console.log(array)
+// console.log(array[1])
 
 // === === === === === === === === === === === === === ===  Методы массивов  === === === === === === === === === === === === === ===
 
