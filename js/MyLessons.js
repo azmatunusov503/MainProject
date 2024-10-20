@@ -1737,7 +1737,7 @@ console.log(sort([4, 5, 2])) */
 // 	console.log(`${item} = ${key}`)
 // })
 
-/* 5 WHILE */
+// 5 WHILE
 // let i = 0
 // while(i < arr.length){
 // 	console.log(arr[i]);
@@ -1861,54 +1861,25 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 // console.log(array[1])
 
 // === === === === === === === === === === === === === ===  Методы массивов  === === === === === === === === === === === === === ===
+/* ===
+splice - удаляет и добавляет в массив новый элемент. Также возвращает удаленный элемент если выводить сам метод в консоль
+Пример:
+	let array = ['Я', 'изучаю', 'JavaScript', 'прямо', 'сейчас']
+	console.log(array.splice(0, 3, 'Давай', 'танцевать')) => // ['Я', 'изучаю', 'JavaScript']
+	console.log(array) => // ['Давай', 'танцевать', 'прямо', 'сейчас']
 
-// const array = [1, 2, 3, 4, 5, 6, 7, 8]
-// console.log(array.splice(1, 4))
-// console.log(array.splice(1, 3, 123))
+splice - 
+=== */
+
+// let array = [1, 2, 3, 4, 5]
+// array.splice(1, 2)
 // console.log(array)
-// console.log(array.splice(-1, 0, 12, 41))
-// console.log(array)
-// console.log(array.length - 4)
-// console.log(array.slice(4))
-// console.log(array.slice(-4))
-// const array = [1, 2, 3]
-// console.log(array.concat([3, 4, 5], array))
-// const arrayObj = {
-// 	0: 'foo',
-// 	length: 1,
-// 	[Symbol.isConcatSpreadable]: true,
-// }
-// console.log(array.concat(arrayObj))
 
-// array.forEach((item, index, array) => {
-// 	console.log(`index: ${index}, item: ${item}, array: ${array}`, array)
-// })
-// const array = [1, 3, 5, 'foo', NaN]
-// console.log(array.indexOf('foo'))
-// console.log(array.indexOf(NaN))
-// console.log(array.includes(NaN))
+let array = ['Я', 'изучаю', 'JavaScript', 'прямо', 'сейчас']
+console.log(array.splice(0, 3, 'Давай', '', ''))
+console.log(array)
 
-// const obj = {
-// 	minAge: 12,
-// 	maxAge: 18,
-// 	canJoin(user){
-// 		return user.age >= this.minAge && user.age < this.maxAge
-// 	}
-// }
 
-// const array = [
-// 	{id: 1, name: 'Вася', age: 11},
-// 	{id: 2, name: 'Петя', age: 14},
-// 	{id: 3, name: 'Маша', age: 20},
-// ]
-// console.log(array.filter(obj.canJoin, obj))
-
-// console.log(array.findLastIndex(item => item.id == 1))
-
-// function camelize(str){
-// 	return str.split('-').map((item, index) => index == 0 ? item: item[0].toUpperCase() + item.slice(1)).join('')
-// }
-// console.log(camelize('back-color'))
 
 // === === === === === === === === === === ===  Методы массивов end === === === === === === === === === === ===
 

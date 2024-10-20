@@ -959,6 +959,7 @@ console.log(arrFilter(arr, 5, (num, el) => num > el))
 	- reduce - Ознакомлен в базовом уровне
 	- find findIndex - Ознакомлен в базовом уровне
 	- flat и flatMap - Ознакомлен в базовом уровне
+	- sort - Ознакомлен в базовом уровне
 === */
 
 /* ===
@@ -1095,9 +1096,48 @@ code
 /* <- === === === === === === === === === === === === === === === === === === === ===  11.4.Упражнение - среднее значение end  === === === === === === === === === === === === === === === === === === === === -> */
 
 
-const prices = [[2, 5], [4, 1], [8, 3, [40, 50]]]
-console.log(prices.flat(1))
-console.log(prices.flatMap(el => el.concat([1])))
+// const prices = [[2, 5], [4, 1], [8, 3, [40, 50]]]
+// console.log(prices.flat(1))
+// console.log(prices.flatMap(el => el.concat([1])))
+
+
+// const users = ['Vasya', 'Masha', 'Katya', 'Anya',]
+
+// console.log(users)
+// users.sort()
+
+// console.log(users)
+
+// const arr = [100, -300, -100, 50, 600]
+
+// console.log(arr)
+// arr.sort((a, b) => a - b)
+// console.log(arr)
+
+// arr.sort((a, b) =>{
+// 	if(a > b){
+// 		return 1
+// 	}
+// 	if(a < b){
+// 		return -1
+// 	}
+// })
+
+// console.log(arr)
+
+
+
+// const arr = new Array(1, 2, 3, 4, 5)
+// const arr1 = new Array(10)
+
+// console.log(arr)
+// console.log(arr1)
+// arr1.fill(1, 0, 3)
+// console.log(arr1)
+
+// const arr2 = Array.from({length: 5}, (cur, i) => i + 10)
+// console.log(arr2)
+
 
 /* === Вопросы:
 
