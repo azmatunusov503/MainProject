@@ -1862,25 +1862,71 @@ console.log(`Колличество не чётных чисел = ${neChetNum}`
 
 // === === === === === === === === === === === === === ===  Методы массивов  === === === === === === === === === === === === === ===
 /* ===
-splice - удаляет и добавляет в массив новый элемент. Также возвращает удаленный элемент если выводить сам метод в консоль
+splice - удаляет и добавляет в массив новый элемент. Также возвращает удаленный элемент если выводить сам метод в консоль. Этот метод модифицирует массив
 Пример:
 	let array = ['Я', 'изучаю', 'JavaScript', 'прямо', 'сейчас']
 	console.log(array.splice(0, 3, 'Давай', 'танцевать')) => // ['Я', 'изучаю', 'JavaScript']
 	console.log(array) => // ['Давай', 'танцевать', 'прямо', 'сейчас']
 
-splice - 
+splice - возвращает элемент массива по индексу star до end не включая сам end. Не модифицирует массив
+Пример:
+	let array = ['Я', 'изучаю', 'JavaScript', 'прямо', 'сейчас']
+	console.log(array.slice(0, 2)) => // ['Я', 'изучаю']
 === */
 
 // let array = [1, 2, 3, 4, 5]
 // array.splice(1, 2)
 // console.log(array)
 
-let array = ['Я', 'изучаю', 'JavaScript', 'прямо', 'сейчас']
-console.log(array.splice(0, 3, 'Давай', '', ''))
-console.log(array)
+// let array = ['Я', 'изучаю', 'JavaScript', 'прямо', 'сейчас']
+// console.log(array)
+// console.log(array.splice(0, 3, 'Давай', '', ''))
+// console.log(array)
 
 
+// console.log(array.slice(0, 2))
+// console.log(array)
 
+
+// function remoteElements(arr, start, end){
+// 	arr.splice(start, end)
+// 	return arr
+// }
+// const arr = [1, 2, 3, 4, 5, 6]
+// console.log(remoteElements(arr, 1, 2))
+
+// function copySubarray(arr, start, end){
+// 	return arr.slice(start, end)
+// }
+// const array = [1, 2, 3, 4, 5]
+// console.log(copySubarray(array, 1, 4))
+let obj2 = {}
+console.log(typeof(obj2) === Object)
+
+// function copySubarray(arr, index, el){
+// 	arr.splice(index, 0, el)
+// 	arr.forEach((el) => {
+// 		if()
+// 	})
+// 	return arr
+// }
+// const array = [1, 2, 3, 4, 5]
+// const obj = {
+// 	0: 1,
+// 	1: 2,
+// 	2: 3,
+// 	// [Symbol.isConcatSpreadable]: true,
+// 	[Symbol.isConcatSpreadable]: true,
+// 	length: 3
+// }
+// console.log(copySubarray(array, 1, obj))
+
+// function extractAndRemove(arr, start, deleteCont){
+// 	return arr.splice(start, deleteCont)
+// }
+// const array = [1, 2, 3, 4, 5]
+// console.log(extractAndRemove(array, 1, 2))
+// console.log(array)
 // === === === === === === === === === === ===  Методы массивов end === === === === === === === === === === ===
 
 /* <- === === === === === === === === === === === === === ===  Массивы end  === === === === === === === === === === === === === === -> */
