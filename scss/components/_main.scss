@@ -31,6 +31,7 @@
 		}
 	}
 }
+
 @function random_range($min, $max) {
 	$rand: random();
 	$random_range: $min + floor($rand * (($max - $min) + 1));
