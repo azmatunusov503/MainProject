@@ -1900,8 +1900,8 @@ splice - возвращает элемент массива по индексу 
 // }
 // const array = [1, 2, 3, 4, 5]
 // console.log(copySubarray(array, 1, 4))
-let obj2 = {}
-console.log(typeof(obj2) === Object)
+// let obj2 = {}
+// console.log(typeof(obj2) === Object)
 
 // function copySubarray(arr, index, el){
 // 	arr.splice(index, 0, el)

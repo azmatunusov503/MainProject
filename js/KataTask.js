@@ -247,66 +247,66 @@ console.log(
 Code
 === */
 
-let password = /* prompt('Введите пароль') */ 'password'
-			,secondPassword = /* prompt('Введите второй пароль') */ 'password'
-function encryptDecrypt(pass, userPassCheck) {
-	let arrPass = pass.split('')
+// let password = /* prompt('Введите пароль') */ 'password'
+// 			,secondPassword = /* prompt('Введите второй пароль') */ 'password'
+// function encryptDecrypt(pass, userPassCheck) {
+// 	let arrPass = pass.split('')
 
-	function crypto(arr) {
-		const index = Array.from(arr.keys())
+// 	function crypto(arr) {
+// 		const index = Array.from(arr.keys())
 
-		arr.forEach((_, i) => {
-			const j = Math.floor(Math.random() * (i + 1));
-			[arr[i], arr[j]] = [arr[j], arr[i]];
-			[index[i], index[j]] = [index[j], index[i]];
-		})
+// 		arr.forEach((_, i) => {
+// 			const j = Math.floor(Math.random() * (i + 1));
+// 			[arr[i], arr[j]] = [arr[j], arr[i]];
+// 			[index[i], index[j]] = [index[j], index[i]];
+// 		})
 
-		return [arr.join(''), index]
-	}
+// 		return [arr.join(''), index]
+// 	}
 
- function unshuffled(shuffledString, index, passCheck){
+//  function unshuffled(shuffledString, index, passCheck){
 
-		const arr = Array.from(shuffledString)
-		const originalArrPass = new Array(arr.length);
-		index.forEach((_, i) => {
-			originalArrPass[index[i]] = arr[i]
-		})
-		// for(let i = 0; i < index.length; i++){
-		// 	originalArrPass[index[i]] = arr[i]
-		// }
-		return [originalArrPass.join(''), passCheck === originalArrPass.join('')]
-	}
-	function showCheckResult(arrayPassword){
-		const [shuffled, index] = crypto(arrayPassword)
-							,[_, resBoolean] = unshuffled(shuffled, index, userPassCheck)
-		return {
-			'+Пароль': pass,
-			'Второй пароль': userPassCheck,
-			'Проверка' : resBoolean,
-			'Зашифрованный': shuffled
-		}
-		// return unshuffled(shuffled, index, userPassCheck)
-	}
-	return showCheckResult(arrPass)
-}
+// 		const arr = Array.from(shuffledString)
+// 		const originalArrPass = new Array(arr.length);
+// 		index.forEach((_, i) => {
+// 			originalArrPass[index[i]] = arr[i]
+// 		})
+// 		// for(let i = 0; i < index.length; i++){
+// 		// 	originalArrPass[index[i]] = arr[i]
+// 		// }
+// 		return [originalArrPass.join(''), passCheck === originalArrPass.join('')]
+// 	}
+// 	function showCheckResult(arrayPassword){
+// 		const [shuffled, index] = crypto(arrayPassword)
+// 							,[_, resBoolean] = unshuffled(shuffled, index, userPassCheck)
+// 		return {
+// 			'+Пароль': pass,
+// 			'Второй пароль': userPassCheck,
+// 			'Проверка' : resBoolean,
+// 			'Зашифрованный': shuffled
+// 		}
+// 		// return unshuffled(shuffled, index, userPassCheck)
+// 	}
+// 	return showCheckResult(arrPass)
+// }
 
-// console.log(encryptDecrypt(password, secondPassword))
+// // console.log(encryptDecrypt(password, secondPassword))
 
 
-function crypto(arr) {
-	const index = Array.from(arr.keys())
+// function crypto(arr) {
+// 	const index = Array.from(arr.keys())
 
-	for (let i = arr.length - 1; i > 0; i--) {
+// 	for (let i = arr.length - 1; i > 0; i--) {
 	
-		const j = Math.floor(Math.random() * (i + 1));
+// 		const j = Math.floor(Math.random() * (i + 1));
 	
-		[arr[i], arr[j]] = [arr[j], arr[i]];
-		[index[i], index[j]] = [index[j], index[i]];
+// 		[arr[i], arr[j]] = [arr[j], arr[i]];
+// 		[index[i], index[j]] = [index[j], index[i]];
 	
-	}
+// 	}
 
-	return [arr.join(''), index]
-}
+// 	return [arr.join(''), index]
+// }
 
 // console.log(encryptDecrypt(password, secondPassword))
 // function test(arr){
@@ -345,5 +345,41 @@ function crypto(arr) {
 
 /* === Вопросы
 	Вопросов нет.
+=== */
+/* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 7.10 end  === === === === === === === === === === === === === === === === === === === === -> */
+
+
+
+/* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 7.10   === === === === === === === === === === === === === === === === === === === === -> */
+/* ===
+
+=== */
+const text = document.querySelector('.text')
+let textColor = text.innerHTML
+let str = ''
+for(let i = 0; i < textColor.length; i++){
+	if(textColor[i].trim(' ')){
+		str += `<span style="color: ${randomColor()}">${textColor[i]}</span>`
+		console.log(`<span style="color: ${randomColor()};">${textColor[i]}</span>`)
+	}
+}
+console.log(str)
+text.innerHTML = str
+function randomColor(){
+	const palitra = '1234567890abcdef'
+	let color = '#'
+	for(let i = 0; i < 6; i++){
+		color += palitra[mathRandom()]
+	}
+	return color
+}
+function mathRandom(){
+	return Math.round(Math.random() * 15)
+}
+
+
+
+/* === Вопрос
+
 === */
 /* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 7.10 end  === === === === === === === === === === === === === === === === === === === === -> */
