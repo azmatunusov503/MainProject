@@ -117,7 +117,6 @@ document.addEventListener('mouseup', function(event) {
 
 // }
 
-
 // <- === === === === === === ===  Задача === === === === === === === ->
 /* function startStopClearBtn(){
 	const startBtn = document.getElementById('controlButton'),
@@ -217,11 +216,6 @@ console.log(
 ) */
 // <- === === === === ===  Задача end  === === === === === ->
 
-
-
-
-
-
 /* <- === === === === === === === === === === === === === === === === === === === ===  Тема  === === === === === === === === === === === === === === === === === === === === -> */
 /* <- === === === === === === === === === === === === === ===  Тема end  === === === === === === === === === === === === === === -> */
 
@@ -292,17 +286,16 @@ Code
 
 // // console.log(encryptDecrypt(password, secondPassword))
 
-
 // function crypto(arr) {
 // 	const index = Array.from(arr.keys())
 
 // 	for (let i = arr.length - 1; i > 0; i--) {
-	
+
 // 		const j = Math.floor(Math.random() * (i + 1));
-	
+
 // 		[arr[i], arr[j]] = [arr[j], arr[i]];
 // 		[index[i], index[j]] = [index[j], index[i]];
-	
+
 // 	}
 
 // 	return [arr.join(''), index]
@@ -331,7 +324,6 @@ Code
 // console.log(test('passwords'.split('')))
 // console.log(test2('passwords'.split('')))
 
-
 // let arr = [1, 2, 3, 4]
 // 			,i = 1
 // 			,j = 2;
@@ -348,38 +340,143 @@ Code
 === */
 /* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 7.10 end  === === === === === === === === === === === === === === === === === === === === -> */
 
-
-
-/* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 7.10   === === === === === === === === === === === === === === === === === === === === -> */
+/* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork  === === === === === === === === === === === === === === === === === === === === -> */
 /* ===
 
 === */
-const text = document.querySelector('.text')
-let textColor = text.innerHTML
-let str = ''
-for(let i = 0; i < textColor.length; i++){
-	if(textColor[i].trim(' ')){
-		str += `<span style="color: ${randomColor()}">${textColor[i]}</span>`
-		console.log(`<span style="color: ${randomColor()};">${textColor[i]}</span>`)
-	}
-}
-console.log(str)
-text.innerHTML = str
-function randomColor(){
-	const palitra = '1234567890abcdef'
-	let color = '#'
-	for(let i = 0; i < 6; i++){
-		color += palitra[mathRandom()]
-	}
-	return color
-}
-function mathRandom(){
-	return Math.round(Math.random() * 15)
-}
+// Функция для генерации случайного цвета в формате hex
+// function getRandomColor() {
+// 	const letters = '0123456789ABCDEF'
+// 	let color = '#'
+// 	for (let i = 0; i < 6; i++) {
+// 		color += letters[Math.floor(Math.random() * 16)]
+// 	}
+// 	return color
+// }
 
+// const text = document.querySelector('.text')
+// let textColor = text.innerHTML
 
+// let str = ''
+// for (let i = 0; i < textColor.length; i++) {
+// 	const span = document.createElement('span')
+// 	if (textColor[i].trim(' ')) {
+// 		span.textContent = textColor[i]
+// 		span.style.color = getRandomColor()
+// 		text.appendChild(span)
+// 		str += `<span style="color: ${getRandomColor()};">${textColor[i]}</span>`
+// 	}
+// }
+// text.innerHTML = str
+
+// Функция для окрашивания текста
+// function colorizeText(text) {
+// 	const container = document.getElementById('text-container')
+// 	container.innerHTML = '' // Очищаем контейнер перед добавлением нового текста
+
+// 	// Проходим по каждой букве в тексте
+// 	for (const letter of text) {
+// 		const span = document.createElement('span')
+// 		span.textContent = letter
+// 		span.style.color = getRandomColor() // Устанавливаем случайный цвет
+// 		span.classList.add('colored-letter') // Добавляем класс для стилей
+// 		container.appendChild(span) // Добавляем букву в контейнер
+// 	}
+// }
+// // Вызываем функцию с текстом при загрузке страницы
+// document.addEventListener('DOMContentLoaded', () => {
+// 	const text = 'Привет, мир!'
+// 	colorizeText(text)
+// })
 
 /* === Вопрос
 
 === */
-/* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 7.10 end  === === === === === === === === === === === === === === === === === === === === -> */
+/* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork end  === === === === === === === === === === === === === === === === === === === === -> */
+
+/* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 11.14  === === === === === === === === === === === === === === === === === === === === -> */
+/* === Задача
+	Дан массив строк ['10-02-2022', 'test', '11/12/2023', '00/13/2022', '41/12/2023']
+	Необходимо написать функцию который удаляла бы из массива все строки, которые нельзя перевести в дату (можно: 10-02-2022 и - 11/12/2023) и возвращала новый массив вида: - ['10-02-2022', '12-11-2023']
+=== */
+// let array = ['10-02-2022', 'test',/*  '11/12/2023', '00/13/2022', '41/12/2023' */]
+
+// array.forEach(el => console.log(el))
+
+/* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 11.14 end  === === === === === === === === === === === === === === === === === === === === -> */
+
+const date1 = new Date('1/2/2025')
+console.log(`${date1.getMonth() + 1} | Месяц`)
+console.log(`${date1.getDate()} | День`)
+console.log(`${date1.getFullYear()} | Год`)
+console.log('------------')
+// const date2 = new Date()
+// console.log(`${date2.getDate()} | День`)
+// console.log(`${date2.getMonth() + 1} | Месяц`)
+// console.log(`${date2.getFullYear()} | Год`)
+// console.log(!isNaN(date1))
+
+// function filterValidDates(arr) {
+// 	return arr.filter(dateString => {
+// 		// Разделяем строку на день, месяц и год
+// 		const parts = dateString.split('-')
+// 		if (parts.length !== 3) return false // Проверяем, что формат правильный
+
+// 		const day = parseInt(parts[0], 10)
+// 		const month = parseInt(parts[1], 10) - 1 // Месяцы начинаются с 0
+// 		const year = parseInt(parts[2], 10)
+
+// 		// Создаем объект Date
+// 		const date = new Date(year, month, day)
+
+// 		// Проверяем, является ли дата валидной
+// 		return (
+// 			!isNaN(date) &&
+// 			date.getDate() === day &&
+// 			date.getMonth() === month &&
+// 			date.getFullYear() === year
+// 		)
+// 	})
+// }
+
+// // Пример использования
+// const inputArray = [
+// 	'10-02-2022',
+// 	'test',
+// 	'11/12/2023',
+// 	'00-13-2022',
+// 	'41-12-2023',
+// ]
+// const validDates = filterValidDates(inputArray)
+
+// console.log(validDates) // Вывод: ['10-02-2022', '11-12-2023']
+
+function filterValidDates(arr) {
+	return arr.filter(dateString => {
+		// Пробуем создать объект Date
+		const date = new Date(dateString)
+
+		// Проверяем, является ли дата валидной
+		return isNaN(date)
+	})
+}
+
+// Функция для форматирования даты в нужный формат (DD-MM-YYYY)
+function formatDate(date) {
+	const day = String(date.getDate()).padStart(2, '0')
+	const month = String(date.getMonth() + 1).padStart(2, '0') // Месяцы начинаются с 0
+	const year = date.getFullYear()
+	return `${day}-${month}-${year}`
+}
+
+// Пример использования
+const inputArray = [
+	'10-02-2022',
+	'test',
+	'11/12/2023',
+	'00/13/2022',
+	'41/12/2023',
+]
+const validDates = filterValidDates(inputArray)
+
+console.log(validDates) // Вывод: ['10-02-2022', '11-12-2023']
