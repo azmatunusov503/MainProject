@@ -400,66 +400,36 @@ Code
 	Необходимо написать функцию который удаляла бы из массива все строки, которые нельзя перевести в дату (можно: 10-02-2022 и - 11/12/2023) и возвращала новый массив вида: - ['10-02-2022', '12-11-2023']
 === */
 // let array = ['10-02-2022', 'test',/*  '11/12/2023', '00/13/2022', '41/12/2023' */]
+const inputArray = ['10-02-2022', 'test', '11/12/2023', '00/13/2022', '41/12/2023',]
+
+const filteredArray = inputArray.filter(str => /[-/.]/.test(str)).map(str => str.split(/[-/.]/))
+for(let c = 0; c < filteredArray.length - 1; c++){
+	for(let i = 0; i < filteredArray[c].length - 1; i++){
+		console.log(filteredArray[c])
+	}
+}
 
 // array.forEach(el => console.log(el))
 
 /* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 11.14 end  === === === === === === === === === === === === === === === === === === === === -> */
 
-const date1 = new Date('1/2/2025')
-console.log(`${date1.getMonth() + 1} | Месяц`)
-console.log(`${date1.getDate()} | День`)
-console.log(`${date1.getFullYear()} | Год`)
-console.log('------------')
+// const date1 = new Date('1/2/2025')
+// console.log(`${date1.getMonth() + 1} | Месяц`)
+// console.log(`${date1.getDate()} | День`)
+// console.log(`${date1.getFullYear()} | Год`)
+// console.log('------------')
 // const date2 = new Date()
 // console.log(`${date2.getDate()} | День`)
 // console.log(`${date2.getMonth() + 1} | Месяц`)
 // console.log(`${date2.getFullYear()} | Год`)
 // console.log(!isNaN(date1))
 
+
 // function filterValidDates(arr) {
 // 	return arr.filter(dateString => {
-// 		// Разделяем строку на день, месяц и год
-// 		const parts = dateString.split('-')
-// 		if (parts.length !== 3) return false // Проверяем, что формат правильный
-
-// 		const day = parseInt(parts[0], 10)
-// 		const month = parseInt(parts[1], 10) - 1 // Месяцы начинаются с 0
-// 		const year = parseInt(parts[2], 10)
-
-// 		// Создаем объект Date
-// 		const date = new Date(year, month, day)
-
-// 		// Проверяем, является ли дата валидной
-// 		return (
-// 			!isNaN(date) &&
-// 			date.getDate() === day &&
-// 			date.getMonth() === month &&
-// 			date.getFullYear() === year
-// 		)
+// 		/[-/.]/.test(str)
 // 	})
 // }
-
-// // Пример использования
-// const inputArray = [
-// 	'10-02-2022',
-// 	'test',
-// 	'11/12/2023',
-// 	'00-13-2022',
-// 	'41-12-2023',
-// ]
-// const validDates = filterValidDates(inputArray)
-
-// console.log(validDates) // Вывод: ['10-02-2022', '11-12-2023']
-
-function filterValidDates(arr) {
-	return arr.filter(dateString => {
-		// Пробуем создать объект Date
-		const date = new Date(dateString)
-
-		// Проверяем, является ли дата валидной
-		return isNaN(date)
-	})
-}
 
 // Функция для форматирования даты в нужный формат (DD-MM-YYYY)
 function formatDate(date) {
@@ -470,13 +440,9 @@ function formatDate(date) {
 }
 
 // Пример использования
-const inputArray = [
-	'10-02-2022',
-	'test',
-	'11/12/2023',
-	'00/13/2022',
-	'41/12/2023',
-]
-const validDates = filterValidDates(inputArray)
+// const validDates = filterValidDates(inputArray)
 
-console.log(validDates) // Вывод: ['10-02-2022', '11-12-2023']
+// console.log(validDates) // Вывод: ['10-02-2022', '11-12-2023']
+
+
+
