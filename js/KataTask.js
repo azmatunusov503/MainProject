@@ -400,15 +400,35 @@ Code
 	Необходимо написать функцию который удаляла бы из массива все строки, которые нельзя перевести в дату (можно: 10-02-2022 и - 11/12/2023) и возвращала новый массив вида: - ['10-02-2022', '12-11-2023']
 === */
 // let array = ['10-02-2022', 'test',/*  '11/12/2023', '00/13/2022', '41/12/2023' */]
-const inputArray = ['10-02-2022', 'test', '11/12/2023', '00/13/2022', '41/12/2023',]
-
-const filteredArray = inputArray.filter(str => /[-/.]/.test(str)).map(str => str.split(/[-/.]/))
-for(let c = 0; c < filteredArray.length - 1; c++){
-	for(let i = 0; i < filteredArray[c].length - 1; i++){
-		console.log(filteredArray[c])
+const inputArray = ['10-02-2022', 'test', '11/12/2023', '00/13/2022', '41/12/2023', '09,12,2023', '01.12.2023']
+let resultArray = []
+const filteredArray = inputArray
+	.filter(str => /[-/.,]/.test(str))
+	.map(str => str.split(/[-/.,]/))
+// .flatMap(str => str.split(/[-/.,]/))
+console.log(filteredArray)
+for (let c = 0; c < filteredArray.length; c++) {
+	if (filteredArray[c][0] < 31 && (filteredArray[c][1] > 1 && filteredArray[c][1] <= 12)) {
+		const date = new Date(`${filteredArray[c][1]}-${filteredArray[c][0]}-${filteredArray[c][2]}`)
+		console.log(date.getDate(), 'день')
+		console.log(date.getMonth() + 1, 'месяц')
+		console.log(`${filteredArray[c][0]}-${filteredArray[c][1]}-${filteredArray[c][2]}`)
 	}
 }
 
+filteredArray.forEach((part, index,) => {
+	// Проверяем, что это день и месяц
+	if (index % 3 === 0 && part < 31) {
+		// Проверяем день
+		const month = filteredArray[index + 1] // Следующий элемент - месяц
+		if (month > 1 && month <= 12) {
+			// Проверяем месяц
+			console.log(part, month)
+			// resultArray.push(`${filteredArray[c][0]}-${filteredArray[c][1]}-${filteredArray[c][2]}`)
+		}
+	}
+})
+console.log(resultArray)
 // array.forEach(el => console.log(el))
 
 /* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 11.14 end  === === === === === === === === === === === === === === === === === === === === -> */
@@ -423,7 +443,6 @@ for(let c = 0; c < filteredArray.length - 1; c++){
 // console.log(`${date2.getMonth() + 1} | Месяц`)
 // console.log(`${date2.getFullYear()} | Год`)
 // console.log(!isNaN(date1))
-
 
 // function filterValidDates(arr) {
 // 	return arr.filter(dateString => {
@@ -443,6 +462,3 @@ function formatDate(date) {
 // const validDates = filterValidDates(inputArray)
 
 // console.log(validDates) // Вывод: ['10-02-2022', '11-12-2023']
-
-
-
