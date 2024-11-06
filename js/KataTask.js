@@ -401,34 +401,39 @@ Code
 === */
 // let array = ['10-02-2022', 'test',/*  '11/12/2023', '00/13/2022', '41/12/2023' */]
 const inputArray = ['10-02-2022', 'test', '11/12/2023', '00/13/2022', '41/12/2023', '09,12,2023', '01.12.2023']
-let resultArray = []
-const filteredArray = inputArray
-	.filter(str => /[-/.,]/.test(str))
-	.map(str => str.split(/[-/.,]/))
-// .flatMap(str => str.split(/[-/.,]/))
-console.log(filteredArray)
-for (let c = 0; c < filteredArray.length; c++) {
-	if (filteredArray[c][0] < 31 && (filteredArray[c][1] > 1 && filteredArray[c][1] <= 12)) {
-		const date = new Date(`${filteredArray[c][1]}-${filteredArray[c][0]}-${filteredArray[c][2]}`)
-		console.log(date.getDate(), 'день')
-		console.log(date.getMonth() + 1, 'месяц')
-		console.log(`${filteredArray[c][0]}-${filteredArray[c][1]}-${filteredArray[c][2]}`)
-	}
-}
-
-filteredArray.forEach((part, index,) => {
-	// Проверяем, что это день и месяц
-	if (index % 3 === 0 && part < 31) {
-		// Проверяем день
-		const month = filteredArray[index + 1] // Следующий элемент - месяц
-		if (month > 1 && month <= 12) {
-			// Проверяем месяц
-			console.log(part, month)
-			// resultArray.push(`${filteredArray[c][0]}-${filteredArray[c][1]}-${filteredArray[c][2]}`)
+function filterValidDates(array){
+	const resultArray = []
+	const filteredArray = array
+		.filter(str => /[-/.,]/.test(str))
+		.map(str => str.split(/[-/.,]/))
+	// .flatMap(str => str.split(/[-/.,]/))
+	// console.log(filteredArray)
+	for (let c = 0; c < filteredArray.length; c++) {
+		if (filteredArray[c][0] < 31 && (filteredArray[c][1] > 1 && filteredArray[c][1] <= 12)) {
+			// const date = new Date(`${filteredArray[c][1]}-${filteredArray[c][0]}-${filteredArray[c][2]}`)
+			// console.log(date.getDate(), 'день')
+			// console.log(date.getMonth() + 1, 'месяц')
+			// console.log(`${filteredArray[c][0]}-${filteredArray[c][1]}-${filteredArray[c][2]}`)
+			resultArray.push(`${filteredArray[c][0]}-${filteredArray[c][1]}-${filteredArray[c][2]}`)
 		}
 	}
-})
-console.log(resultArray)
+	return resultArray
+}
+console.log(filterValidDates(inputArray))
+
+
+// filteredArray.forEach((part, index,) => {
+// 	// Проверяем, что это день и месяц
+// 	if (index % 3 === 0 && part < 31) {
+// 		// Проверяем день
+// 		const month = filteredArray[index + 1] // Следующий элемент - месяц
+// 		if (month > 1 && month <= 12) {
+// 			// Проверяем месяц
+// 			console.log(part, month)
+// 			// resultArray.push(`${filteredArray[c][0]}-${filteredArray[c][1]}-${filteredArray[c][2]}`)
+// 		}
+// 	}
+// })
 // array.forEach(el => console.log(el))
 
 /* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 11.14 end  === === === === === === === === === === === === === === === === === === === === -> */
