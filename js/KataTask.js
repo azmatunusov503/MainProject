@@ -400,70 +400,56 @@ Code
 	Необходимо написать функцию который удаляла бы из массива все строки, которые нельзя перевести в дату (можно: 10-02-2022 и - 11/12/2023) и возвращала новый массив вида: - ['10-02-2022', '12-11-2023']
 === */
 // let array = ['10-02-2022', 'test',/*  '11/12/2023', '00/13/2022', '41/12/2023' */]
-const inputArray = ['10-02-2022', 'test', '11/12/2023', '00/13/2022', '41/12/2023', '09,12,2023', '01.12.2023']
-function filterValidDates(array){
+
+/* ===
+	- Code
+=== */
+
+const inputArray = [
+	'10-02-2022',
+	'test',
+	'11/12/2023',
+	'00/13/2022',
+	'41/12/2023',
+]
+function filterValidDates(array) {
 	const resultArray = []
 	const filteredArray = array
 		.filter(str => /[-/.,]/.test(str))
 		.map(str => str.split(/[-/.,]/))
-	// .flatMap(str => str.split(/[-/.,]/))
-	// console.log(filteredArray)
 	for (let c = 0; c < filteredArray.length; c++) {
-		if (filteredArray[c][0] < 31 && (filteredArray[c][1] > 1 && filteredArray[c][1] <= 12)) {
-			// const date = new Date(`${filteredArray[c][1]}-${filteredArray[c][0]}-${filteredArray[c][2]}`)
-			// console.log(date.getDate(), 'день')
-			// console.log(date.getMonth() + 1, 'месяц')
-			// console.log(`${filteredArray[c][0]}-${filteredArray[c][1]}-${filteredArray[c][2]}`)
-			resultArray.push(`${filteredArray[c][0]}-${filteredArray[c][1]}-${filteredArray[c][2]}`)
+		// Решение 1
+		if (filteredArray[c][0] > 0 && filteredArray[c][0] <= 31 && filteredArray[c][1] >= 1 && filteredArray[c][1] <= 12) {
+			resultArray.push(`${filteredArray[c][0].padStart(2, '0')}-${filteredArray[c][1].padStart(2, '0')}-${filteredArray[c][2]}`)
 		}
 	}
 	return resultArray
 }
-console.log(filterValidDates(inputArray))
 
+// console.log(filterValidDates(inputArray))
 
-// filteredArray.forEach((part, index,) => {
-// 	// Проверяем, что это день и месяц
-// 	if (index % 3 === 0 && part < 31) {
-// 		// Проверяем день
-// 		const month = filteredArray[index + 1] // Следующий элемент - месяц
-// 		if (month > 1 && month <= 12) {
-// 			// Проверяем месяц
-// 			console.log(part, month)
-// 			// resultArray.push(`${filteredArray[c][0]}-${filteredArray[c][1]}-${filteredArray[c][2]}`)
-// 		}
-// 	}
-// })
-// array.forEach(el => console.log(el))
+// const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+// const date = new Date('3-29-2024')
+// const currentMonth = date.getMonth() + 1
+// const currentYear = date.getFullYear()
 
-/* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 11.14 end  === === === === === === === === === === === === === === === === === === === === -> */
-
-// const date1 = new Date('1/2/2025')
-// console.log(`${date1.getMonth() + 1} | Месяц`)
-// console.log(`${date1.getDate()} | День`)
-// console.log(`${date1.getFullYear()} | Год`)
-// console.log('------------')
-// const date2 = new Date()
-// console.log(`${date2.getDate()} | День`)
-// console.log(`${date2.getMonth() + 1} | Месяц`)
-// console.log(`${date2.getFullYear()} | Год`)
-// console.log(!isNaN(date1))
-
-// function filterValidDates(arr) {
-// 	return arr.filter(dateString => {
-// 		/[-/.]/.test(str)
-// 	})
+// function isLapYear(year){
+// 	return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0 ? true : false
 // }
 
-// Функция для форматирования даты в нужный формат (DD-MM-YYYY)
-function formatDate(date) {
-	const day = String(date.getDate()).padStart(2, '0')
-	const month = String(date.getMonth() + 1).padStart(2, '0') // Месяцы начинаются с 0
-	const year = date.getFullYear()
-	return `${day}-${month}-${year}`
-}
+// if(currentMonth >= 1 && currentMonth <= 12) {
+// 	console.log(`Текущий месяц: ${months[currentMonth - 1]}`)
+// 	if(isLapYear(currentYear)){
+// 		console.log(`${currentYear} - високосный год`)
+// 	}else{
+// 		console.log(`${currentYear} - не високосный год`)
+// 	}
+// }else{
+// 	console.log('Неверный месяц')
+// }
+// console.log(isLapYear(2016))
 
-// Пример использования
-// const validDates = filterValidDates(inputArray)
-
-// console.log(validDates) // Вывод: ['10-02-2022', '11-12-2023']
+/* === Вопросы:
+	!-
+=== */
+/* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 11.14 end  === === === === === === === === === === === === === === === === === === === === -> */

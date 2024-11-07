@@ -1143,3 +1143,139 @@ code
 
 === */
 /* <- === === === === === === === === === === === === === === === === === === === ===  Итерация в массиве end  === === === === === === === === === === === === === === === === === === === === -> */
+
+
+
+/* <- === === === === === === === === === === === === === === === === === === === ===  Работа со строками  === === === === === === === === === === === === === === === === === === === === -> */
+/* ===
+
+=== */
+
+/* ===
+ - Code
+=== */
+// const userName = 'Вася Пупкин'
+
+// console.log(userName.charAt(0))
+// console.log(userName.charAt(1))
+// console.log(userName.charAt(2))
+// console.log(userName.indexOf('П'))
+// console.log(userName.lastIndexOf('п'))
+// console.log(userName.includes('п'))
+// console.log(userName.slice(5, 11))
+
+/* === Задача
+ - Вытащить имя и фамилию в отдельный переменные
+=== */
+// const fullUserName = 'Вася aka Terminator Perdinator Пупкин'
+// const userName = fullUserName.slice(0, fullUserName.indexOf(' '))
+// const userSurname = fullUserName.slice(fullUserName.lastIndexOf(' ') + 1, fullUserName.length)
+// console.log(userName)
+// console.log(userSurname)
+
+
+
+// const str = 'Вася Пупкин'
+// console.log(str.includes('а'))
+// console.log(str.startsWith('В'))
+// console.log(str.endsWith('н'))
+// console.log(new String('Вася Пупкин').includes(' '))
+
+
+// const str = 'Вася Пупкин'
+// console.log(str.toLowerCase())
+// console.log(str.toUpperCase())
+// console.log(str.replace('В', 'Ф'))
+// console.log(str.replace('В', 'Д'))
+// console.log(str.replaceAll('а', 'и'))
+// console.log(str.replace(/а/g, 'и'))
+
+// const str = ' Вася Пупкин  '
+
+// console.log(str.trim(' '))
+
+
+/* === Задача
+ - Проверить является ли это номером телефона России
+=== */
+/* Верно */
+// const num = '89103235356'
+// const num1 = '+79103235356'
+// const num2 = '+7(910)3235356'
+// const num3 = '  +7(910) 323-53-56'
+// const num4 = '+7(910) 323-53-56  '
+/* Не верно */
+
+// const numError = '89103235'
+// const num1Error = '+7d910d323-53-56'
+// const num2Error = '+910d323-53-56'
+
+// function isPhoneNumber(num){
+	// num = num.trim()
+	// num = num.replace('+7', '8')
+	// if(!num.startsWith('8')){
+	// 	return false
+	// }
+	// num = num.replaceAll('(', '')
+	// num = num.replaceAll(')', '')
+	// num = num.replaceAll(' ', '')
+	// num = num.replaceAll('-', '')
+	// if(num.length != 11){
+	// 	return false
+	// }
+	// let onlyNumber = true
+	// for(const char of num){
+	// 	if(isNaN(Number(char))){
+	// 		onlyNumber = false
+	// 		break
+	// 	}
+	// }
+	// return onlyNumber
+// }
+
+// console.log(isPhoneNumber(num))
+// console.log(isPhoneNumber(num1))
+// console.log(isPhoneNumber(num2))
+// console.log(isPhoneNumber(num3))
+// console.log(isPhoneNumber(num4))
+// console.log(isPhoneNumber(numError))
+// console.log(isPhoneNumber(num1Error))
+// console.log(isPhoneNumber(num2Error))
+
+// const userFullName = 'Вася Пупкин Васильевич'
+
+// console.log(userFullName.split(' '))
+// const [firstName, familyName, lastName] = userFullName.split(' ')
+// console.log(firstName)
+// console.log(familyName)
+// console.log(lastName)
+// const arr = ['Ты', 'знаешь', 'JS']
+// console.log(arr.join(' '))
+
+// const film = 'Звездные Воины '
+// console.log(film.padStart(20, '*'))
+// console.log(film.padEnd(20, '*'))
+
+// console.log(film.repeat(10))
+
+/* === Задача
+ - Замаскировать всё, кроме последних 4х символов
+=== */
+// const card = '8600140421633307'
+// /* 8600********3307 */
+// function hideCards(num){
+// 	const cardStart = num.slice(0, 4)
+// 	const cardEnd = num.slice(-4)
+// 	return `${cardStart.padEnd(8,'*')}${cardEnd}`
+// }
+// console.log(hideCards(card))
+
+
+
+let str = 'How are you?'
+str = str.padStart(1, '%')
+console.log(str)
+/* === Вопросы:
+ !-
+=== */
+/* <- === === === === === === === === === === === === === === === === === === === ===  Работа со строками end  === === === === === === === === === === === === === === === === === === === === -> */
