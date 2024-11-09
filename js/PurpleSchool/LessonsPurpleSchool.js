@@ -1272,9 +1272,7 @@ code
 
 
 
-let str = 'How are you?'
-str = str.padStart(1, '%')
-console.log(str)
+
 /* === Вопросы:
  !-
 === */

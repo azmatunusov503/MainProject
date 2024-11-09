@@ -419,8 +419,18 @@ function filterValidDates(array) {
 		.map(str => str.split(/[-/.,]/))
 	for (let c = 0; c < filteredArray.length; c++) {
 		// Решение 1
-		if (filteredArray[c][0] > 0 && filteredArray[c][0] <= 31 && filteredArray[c][1] >= 1 && filteredArray[c][1] <= 12) {
-			resultArray.push(`${filteredArray[c][0].padStart(2, '0')}-${filteredArray[c][1].padStart(2, '0')}-${filteredArray[c][2]}`)
+		if (
+			filteredArray[c][0] > 0 &&
+			filteredArray[c][0] <= 31 &&
+			filteredArray[c][1] >= 1 &&
+			filteredArray[c][1] <= 12
+		) {
+			resultArray.push(
+				`${filteredArray[c][0].padStart(2, '0')}-${filteredArray[c][1].padStart(
+					2,
+					'0'
+				)}-${filteredArray[c][2]}`
+			)
 		}
 	}
 	return resultArray
@@ -453,3 +463,48 @@ function filterValidDates(array) {
 	!-
 === */
 /* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 11.14 end  === === === === === === === === === === === === === === === === === === === === -> */
+
+/* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 12.11  === === === === === === === === === === === === === === === === === === === === -> */
+/* === Задача
+ - Написать функцию проверки номера карты алгоритмом Луна. В функцию предается карта 4561-2612-1234-5464,
+				а функция возвращает true, если карта проходит алгоритм и false, если нет.
+=== */
+
+function checkLuhn(str) {
+	let sum = 0
+	const parity = str.length % 2
+	if (str.length !== 16) {
+		return `Карта не существует`
+	}
+
+	for (let i = 0; i < str.length; i++) {
+		let digit = Number(str[i])
+		if (i % 2 === parity) {
+			digit *= 2
+			if (digit > 9) {
+				digit -= 9
+			}
+		}
+		sum += digit
+	}
+	return Number(sum % 10) === 0
+}
+
+const numCard = '8600140421633307'
+console.log(checkLuhn(numCard))
+
+// function luhnAlgorithm(str){
+// 	let sum = 0;
+// 	const validCard = str.length
+// 	for(let c = 0; c < str.length; c++){
+// 		let elCard = Number(str[c])
+
+// 	}
+// }
+// for(let i = 0; i < 16; i++){
+// 	if(i % 2 !== 0){
+// 		console.log(`Не четные числа ${i}`)
+// 	}
+// }
+
+/* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 12.11 end  === === === === === === === === === === === === === === === === === === === === -> */
