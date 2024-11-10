@@ -469,42 +469,30 @@ function filterValidDates(array) {
  - Написать функцию проверки номера карты алгоритмом Луна. В функцию предается карта 4561-2612-1234-5464,
 				а функция возвращает true, если карта проходит алгоритм и false, если нет.
 === */
-
-function checkLuhn(str) {
-	let sum = 0
-	const parity = str.length % 2
-	if (str.length !== 16) {
-		return `Карта не существует`
-	}
-
-	for (let i = 0; i < str.length; i++) {
-		let digit = Number(str[i])
-		if (i % 2 === parity) {
-			digit *= 2
-			if (digit > 9) {
-				digit -= 9
+const numCard = '8600-14042163 3307'
+function luhnAlgorithm(str){
+	let sum = 0;
+	for(let c = 0; c < str.length; c++){
+		let elCard = Number(str[c])
+		if(c % 2 === 0){
+			elCard *= 2
+			if(elCard > 9){
+				elCard -= 9
 			}
 		}
-		sum += digit
+		sum += elCard
 	}
 	return Number(sum % 10) === 0
 }
 
-const numCard = '8600140421633307'
-console.log(checkLuhn(numCard))
-
-// function luhnAlgorithm(str){
-// 	let sum = 0;
-// 	const validCard = str.length
-// 	for(let c = 0; c < str.length; c++){
-// 		let elCard = Number(str[c])
-
-// 	}
-// }
-// for(let i = 0; i < 16; i++){
-// 	if(i % 2 !== 0){
-// 		console.log(`Не четные числа ${i}`)
-// 	}
-// }
-
+function validCards(card){
+	const arrayCards = card.split('')
+	const filteredArrayCard = arrayCards.filter(el => !(/[- ]/.test(el))).join('')
+	if(filteredArrayCard.length === 16){
+		return luhnAlgorithm(filteredArrayCard)
+	}
+	return `Карта не существует`
+}
+console.log(validCards(numCard))
+// console.log(!isNaN(''))
 /* <- === === === === === === === === === === === === === === === === === === === ===  HomeWork 12.11 end  === === === === === === === === === === === === === === === === === === === === -> */
